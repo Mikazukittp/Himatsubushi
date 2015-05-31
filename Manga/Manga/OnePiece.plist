@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<array>
+		<dict>
+			<key>question</key>
+			<array>
+				<string>ゾロ</string>
+				<string>ルフィー</string>
+				<string>サンジ</string>
+				<string>ナミ</string>
+			</array>
+		</dict>
+		<dict>
+			<key>question</key>
+			<string>海賊王は誰？</string>
+			<key>New item</key>
+			<array>
+				<string>ロジャー</string>
+				<string>シャンクス</string>
+				<string>アーロン</string>
+				<string>鉄拳のフルボディ</string>
+			</array>
+		</dict>
+		<dict>
+			<key>qustion</key>
+			<string>クソお世話なりました。言った人だれ？</string>
+			<key>New item</key>
+			<array>
+				<string>コピー</string>
+				<string>バギー</string>
+				<string>サンジ</string>
+				<string>エース</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
