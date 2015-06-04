@@ -19,6 +19,10 @@
 		8335FE3B1B1AFF1E005614BE /* MMTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335FE391B1AFF1E005614BE /* MMTopViewController.m */; };
 		8335FE3C1B1AFF1E005614BE /* MMTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8335FE3A1B1AFF1E005614BE /* MMTopViewController.xib */; };
 		8335FE3E1B1AFF3B005614BE /* OnePiece.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8335FE3D1B1AFF3B005614BE /* OnePiece.plist */; };
+		83BB839B1B1B6347008A4D99 /* MMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB83991B1B6347008A4D99 /* MMResultViewController.m */; };
+		83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */; };
+		83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */; };
+		83EA9C031B1B14AF00DBD794 /* MMQuestionSentenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,12 @@
 		8335FE391B1AFF1E005614BE /* MMTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTopViewController.m; sourceTree = "<group>"; };
 		8335FE3A1B1AFF1E005614BE /* MMTopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMTopViewController.xib; sourceTree = "<group>"; };
 		8335FE3D1B1AFF3B005614BE /* OnePiece.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OnePiece.plist; sourceTree = "<group>"; };
+		83BB83981B1B6347008A4D99 /* MMResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMResultViewController.h; sourceTree = "<group>"; };
+		83BB83991B1B6347008A4D99 /* MMResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMResultViewController.m; sourceTree = "<group>"; };
+		83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMResultViewController.xib; sourceTree = "<group>"; };
+		83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuestionSentenceView.h; sourceTree = "<group>"; };
+		83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionSentenceView.m; sourceTree = "<group>"; };
+		83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMQuestionSentenceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,9 @@
 				8335FE381B1AFF1E005614BE /* MMTopViewController.h */,
 				8335FE391B1AFF1E005614BE /* MMTopViewController.m */,
 				8335FE3A1B1AFF1E005614BE /* MMTopViewController.xib */,
+				83BB83981B1B6347008A4D99 /* MMResultViewController.h */,
+				83BB83991B1B6347008A4D99 /* MMResultViewController.m */,
+				83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -148,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				8335FE251B1AFD6E005614BE /* Cell */,
+				83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */,
+				83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */,
+				83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -242,8 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EA9C031B1B14AF00DBD794 /* MMQuestionSentenceView.xib in Resources */,
 				8335FE371B1AFE05005614BE /* MMTopTableViewCell.xib in Resources */,
 				8335FE3C1B1AFF1E005614BE /* MMTopViewController.xib in Resources */,
+				83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */,
 				8335FE3E1B1AFF3B005614BE /* OnePiece.plist in Resources */,
 				8335FDFF1B1AFD0B005614BE /* LaunchScreen.xib in Resources */,
 				8335FE331B1AFE05005614BE /* MMQuestionViewController.xib in Resources */,
@@ -266,10 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8335FE351B1AFE05005614BE /* MMQuestionViewController.m in Sources */,
+				83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */,
 				8335FDF41B1AFD0B005614BE /* AppDelegate.m in Sources */,
 				8335FDF11B1AFD0B005614BE /* main.m in Sources */,
 				8335FE3B1B1AFF1E005614BE /* MMTopViewController.m in Sources */,
 				8335FE341B1AFE05005614BE /* MMTopTableViewCell.m in Sources */,
+				83BB839B1B1B6347008A4D99 /* MMResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +478,7 @@
 				8335FE101B1AFD0B005614BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8335FE111B1AFD0B005614BE /* Build configuration list for PBXNativeTarget "MangaTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +487,7 @@
 				8335FE131B1AFD0B005614BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

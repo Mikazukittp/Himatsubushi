@@ -14,14 +14,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NARUTO 検定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
-                    <rect key="frame" x="252" y="180" width="110" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NARUTO 検定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
+                    <rect key="frame" x="245" y="187" width="110" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="JXj-cY-hqV"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywF-0N-nU4">
-                    <rect key="frame" x="267" y="407" width="90" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywF-0N-nU4">
+                    <rect key="frame" x="255" y="415" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pLa-Tg-51v"/>
+                    </constraints>
                     <state key="normal" title="検定を始める">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -29,8 +35,38 @@
                         <action selector="startButtonTapped:" destination="-1" eventType="touchUpInside" id="wdA-mo-yH7"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsB-PL-CKN">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="152"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZq-n1-am0">
+                    <rect key="frame" x="0.0" y="255" width="600" height="152"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ5-lN-OqF">
+                    <rect key="frame" x="0.0" y="448" width="600" height="152"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HZq-n1-am0" firstAttribute="top" secondItem="hb3-oJ-lEV" secondAttribute="bottom" constant="47" id="3Md-Ho-xuf"/>
+                <constraint firstAttribute="trailing" secondItem="KsB-PL-CKN" secondAttribute="trailing" id="3lE-uN-GII"/>
+                <constraint firstItem="HZq-n1-am0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4x4-se-FXD"/>
+                <constraint firstItem="LZ5-lN-OqF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FZ0-7i-op4"/>
+                <constraint firstItem="hb3-oJ-lEV" firstAttribute="top" secondItem="KsB-PL-CKN" secondAttribute="bottom" constant="35" id="JY5-NB-L42"/>
+                <constraint firstItem="ywF-0N-nU4" firstAttribute="top" secondItem="HZq-n1-am0" secondAttribute="bottom" constant="8" id="QaW-VH-CFc"/>
+                <constraint firstItem="KsB-PL-CKN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RfL-f6-08w"/>
+                <constraint firstItem="LZ5-lN-OqF" firstAttribute="top" secondItem="ywF-0N-nU4" secondAttribute="bottom" constant="3" id="TCf-OD-TV4"/>
+                <constraint firstItem="HZq-n1-am0" firstAttribute="height" secondItem="KsB-PL-CKN" secondAttribute="height" id="bDc-C2-P1z"/>
+                <constraint firstAttribute="trailing" secondItem="HZq-n1-am0" secondAttribute="trailing" id="cS5-fy-4rM"/>
+                <constraint firstAttribute="centerX" secondItem="hb3-oJ-lEV" secondAttribute="centerX" id="cnQ-85-Z8J"/>
+                <constraint firstAttribute="centerX" secondItem="ywF-0N-nU4" secondAttribute="centerX" id="g8D-0J-w0G"/>
+                <constraint firstItem="HZq-n1-am0" firstAttribute="height" secondItem="LZ5-lN-OqF" secondAttribute="height" id="iAq-bH-qH8"/>
+                <constraint firstAttribute="bottom" secondItem="LZ5-lN-OqF" secondAttribute="bottom" id="jOH-ck-yfJ"/>
+                <constraint firstAttribute="trailing" secondItem="LZ5-lN-OqF" secondAttribute="trailing" id="p4k-Rq-ch7"/>
+                <constraint firstItem="KsB-PL-CKN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xDT-is-9DU"/>
+            </constraints>
         </view>
     </objects>
 </document>
