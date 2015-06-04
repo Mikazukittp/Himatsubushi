@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BF49850B-BFB2-4227-88DD-1B8BE0B45486</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Manga</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A4FFF8A880FF6FD263DE0E863660523E36835437</key>
 		<string>https://github.com/haijima/Himatsubushi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Manga/Manga.xcodeproj/project.xcworkspace</string>
+	<string>Manga/Manga.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A4FFF8A880FF6FD263DE0E863660523E36835437</key>
