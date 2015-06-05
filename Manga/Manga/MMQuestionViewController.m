@@ -28,6 +28,8 @@
 
     self.title = @"問題";
     
+    self.navigationController.delegate = self;
+    
     //データ作成
     [self fetchData];
     
@@ -39,8 +41,6 @@
     
     // Do any additional setup after loading the view from its nib.
 }
-
-
 
 - (void)fetchData {
     
@@ -89,7 +89,7 @@
     
     if (currentQuestionNumber >= _questions.count) {
         MMResultViewController *vc = [MMResultViewController new];
-    [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }else {
         [self.tableView reloadData];
     }
