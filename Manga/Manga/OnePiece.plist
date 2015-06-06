@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>New item</key>
+<array>
 	<array>
 		<dict>
 			<key>question</key>
+			<string>三千世界使えるのは？</string>
+			<key>choice</key>
 			<array>
 				<string>ゾロ</string>
 				<string>ルフィー</string>
 				<string>サンジ</string>
 				<string>ナミ</string>
 			</array>
+			<key>answer</key>
+			<string>1</string>
 		</dict>
 		<dict>
 			<key>question</key>
 			<string>海賊王は誰？</string>
-			<key>New item</key>
+			<key>choice</key>
 			<array>
 				<string>ロジャー</string>
 				<string>シャンクス</string>
 				<string>アーロン</string>
 				<string>鉄拳のフルボディ</string>
 			</array>
+			<key>answer</key>
+			<string>2</string>
 		</dict>
 		<dict>
-			<key>qustion</key>
+			<key>question</key>
 			<string>クソお世話なりました。言った人だれ？</string>
-			<key>New item</key>
+			<key>choice</key>
 			<array>
 				<string>コピー</string>
 				<string>バギー</string>
 				<string>サンジ</string>
 				<string>エース</string>
 			</array>
+			<key>answer</key>
+			<string>3</string>
 		</dict>
 	</array>
-</dict>
+</array>
 </plist>

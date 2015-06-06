@@ -8,10 +8,16 @@
 
 #import "MMQuestionViewController.h"
 #import "MMTopTableViewCell.h"
+#import "MMQuestionSentenceView.h"
+#import "MMResultViewController.h"
 
-@interface MMQuestionViewController ()
+@interface MMQuestionViewController () {
+    int currentQuestionNumber;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSMutableArray *questions;
+@property (weak, nonatomic) IBOutlet UIView *questionView;
+@property (weak, nonatomic) IBOutlet UILabel *questionSentence;
 
 @end
 
@@ -19,28 +25,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.title = @"問題";
+    
+    self.navigationController.delegate = self;
+    
+    //データ作成
     [self fetchData];
     
     UINib *nib = [UINib nibWithNibName:@"MMTopTableViewCell" bundle:nil];
     [_tableView registerNib:nib forCellReuseIdentifier:@"MMTopTableViewCell"];
-
     
     [self.tableView reloadData];
+
     
     // Do any additional setup after loading the view from its nib.
 }
-
-
 
 - (void)fetchData {
     
     NSBundle* bundle = [NSBundle mainBundle];
     //読み込むファイルパスを指定
     NSString* path = [bundle pathForResource:@"OnePiece" ofType:@"plist"];
-    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    _questions = [NSMutableArray arrayWithArray:[dic objectForKey:@"New item"]];
+    _questions = [[NSMutableArray arrayWithContentsOfFile:path] objectAtIndex:0];
+    
+    currentQuestionNumber = 0;
 }
 
+- (NSDictionary *)currentQuestionDictionary {
+    return [_questions objectAtIndex:currentQuestionNumber];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -52,10 +66,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *question = [self currentQuestionDictionary];
+    
     static NSString *CellIdentifier = @"MMTopTableViewCell";
     MMTopTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    NSDictionary *dict = [_mugiwaraEntitys objectAtIndex:indexPath.row];
-//    cell.name.text = [dict objectForKey:@"name"];
+    _questionSentence.text = [question objectForKey:@"question"];
+    
+    NSArray *choice = [question objectForKey:@"choice"];
+    
+    cell.name.text = [choice objectAtIndex:indexPath.row];
     return  (UITableViewCell *)cell;
     
 }
@@ -64,13 +83,28 @@
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
+
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES]; // 選択状態の解除
+    currentQuestionNumber++;
     
-//    [self performSegueWithIdentifier:@"MMDetailViewController" sender:nil];
-    
+    if (currentQuestionNumber >= _questions.count) {
+        MMResultViewController *vc = [MMResultViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else {
+        [self.tableView reloadData];
+    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 50;
 }
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end
