@@ -1,0 +1,7 @@
+class InsertMangaData
+  require 'csv'
+  CSV.foreach('lib/tasks/sample.csv').with_index do |record, index|
+    next if index == 0
+	Question.create(manga_id: record[0], sentence: record[1],select_1: record[2],select_2:record[3],select_3:record[4],select_4:record[5],correct_answer: record[6])
+  end
+end
