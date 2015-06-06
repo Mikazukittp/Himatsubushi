@@ -2,12 +2,10 @@ module Api
   module V1
     class QuestionController < ApplicationController
       def return_array
+        questions = Question.where(manga_id: params[:id]).to_a
+
         render :json => {
-          hoge1: 'fuga',
-          hoge2: 'fuga',
-          hoge3: 'fuga',
-          hoge4: 'fuga',
-          hoge5: 'fuga'
+          question_array: questions.shuffle.take(10)
         }
       end
     end
