@@ -16,7 +16,7 @@ typedef void (^successAction)(void);
 //通信失敗時のブロック
 typedef void (^failedAction)(NSError *error);
 
-typedef void (^setEntityArray)(NSArray *questionData,NSError *error);
+typedef void (^setEntityArray)(NSDictionary *questionData,NSError *error);
 
 -(void)sendAsynchronousByUrl:(NSURLRequest *)url block:(setEntityArray)block;
 
