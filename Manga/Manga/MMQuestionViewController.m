@@ -12,6 +12,8 @@
 #import "MMUIButton.h"
 #import "MMQuestionFetcher.h"
 #import "MMQuestionEntity.h"
+#import "MMIndicatorCustomView.h"
+#import "MONActivityIndicatorView.h"
 
 @import GoogleMobileAds;
 
@@ -28,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet MMUIButton *answer3Button;
 @property (weak, nonatomic) IBOutlet MMUIButton *answer4Button;
 @property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
+@property (nonatomic, strong) MMIndicatorCustomView *indicatorView;
 
 @end
 
@@ -40,12 +43,17 @@
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
         self.edgesForExtendedLayout = UIRectEdgeNone;
-                
+    
+    UIScreen* screen = [UIScreen mainScreen];
+    
+    //全画面の大きさで生成
+    _indicatorView = [[MMIndicatorCustomView alloc]initWithFrame:CGRectMake(0, 0, screen.bounds.size.width,screen.bounds.size.height)];
+    
+    [self.view addSubview:_indicatorView];
+    [_indicatorView startAnimation];
+    
     //データ作成
     [self fetchData];
-    
-//    [self setAnswerButtonSentence];
-//    [self adBannerView];
 }
 
 - (void)adBannerView {
@@ -55,6 +63,35 @@
     [self.bannerView loadRequest:[GADRequest request]];
     
 }
+
+- (void)netWorkError {
+    
+    if ([UIAlertController class]) {
+        // iOS バージョンが 8 以上で、UIAlertController クラスが利用できる場合
+        UIAlertController *alertController =
+        [UIAlertController alertControllerWithTitle:@"通信エラー"
+                                            message:@"通信に失敗しました。再度お試しください。"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        // Close ボタンを表示する
+        UIAlertAction *alertAction =
+        [UIAlertAction actionWithTitle:@"了解"
+                                 style:UIAlertActionStyleCancel
+                               handler:nil];
+        [alertController addAction:alertAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    } else {
+        // iOS バージョンが 8 未満で、UIAlertController クラスが利用できない場合
+        UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:@"通信エラー"
+                                   message:@"通信に失敗しました。再度お試しください。e"
+                                  delegate:nil
+                         cancelButtonTitle:@"了解"
+                         otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
 
 
 - (void)fetchData {
@@ -71,8 +108,12 @@
         _questions = fetcher.questions;
         [weakSelf setAnswerButtonSentence];
         [weakSelf adBannerView];
+        weakSelf.indicatorView.hidden = NO;
+        [weakSelf.indicatorView stopAnimation];
     }failedBlock:^(NSError *error){
         NSLog(@"%@",error);
+        [weakSelf.indicatorView stopAnimation];
+        [weakSelf netWorkError];
     }];
     
     

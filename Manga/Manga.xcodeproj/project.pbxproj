@@ -20,6 +20,8 @@
 		83410E141B24233600AC08FA /* MMBaseFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E131B24233600AC08FA /* MMBaseFetcher.m */; };
 		83410E171B2427EB00AC08FA /* MMQuestionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E161B2427EB00AC08FA /* MMQuestionFetcher.m */; };
 		83410E1C1B242EE400AC08FA /* MMQuestionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E1B1B242EE400AC08FA /* MMQuestionEntity.m */; };
+		83A598E41B24884F0040B51F /* MMIndicatorCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A598E31B24884F0040B51F /* MMIndicatorCustomView.xib */; };
+		83A598E71B2488620040B51F /* MMIndicatorCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A598E61B2488620040B51F /* MMIndicatorCustomView.m */; };
 		83BB839B1B1B6347008A4D99 /* MMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB83991B1B6347008A4D99 /* MMResultViewController.m */; };
 		83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */; };
 		83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */; };
@@ -64,6 +66,9 @@
 		83410E161B2427EB00AC08FA /* MMQuestionFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionFetcher.m; sourceTree = "<group>"; };
 		83410E1A1B242EE400AC08FA /* MMQuestionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuestionEntity.h; sourceTree = "<group>"; };
 		83410E1B1B242EE400AC08FA /* MMQuestionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionEntity.m; sourceTree = "<group>"; };
+		83A598E31B24884F0040B51F /* MMIndicatorCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMIndicatorCustomView.xib; sourceTree = "<group>"; };
+		83A598E51B2488620040B51F /* MMIndicatorCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIndicatorCustomView.h; sourceTree = "<group>"; };
+		83A598E61B2488620040B51F /* MMIndicatorCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIndicatorCustomView.m; sourceTree = "<group>"; };
 		83BB83981B1B6347008A4D99 /* MMResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMResultViewController.h; sourceTree = "<group>"; };
 		83BB83991B1B6347008A4D99 /* MMResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMResultViewController.m; sourceTree = "<group>"; };
 		83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMResultViewController.xib; sourceTree = "<group>"; };
@@ -189,6 +194,9 @@
 				83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */,
 				83F4B2FF1B22BF8100491108 /* MMUIButton.h */,
 				83F4B3001B22BF8100491108 /* MMUIButton.m */,
+				83A598E51B2488620040B51F /* MMIndicatorCustomView.h */,
+				83A598E61B2488620040B51F /* MMIndicatorCustomView.m */,
+				83A598E31B24884F0040B51F /* MMIndicatorCustomView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */,
 				8335FE3E1B1AFF3B005614BE /* OnePiece.plist in Resources */,
 				8335FDFF1B1AFD0B005614BE /* LaunchScreen.xib in Resources */,
+				83A598E41B24884F0040B51F /* MMIndicatorCustomView.xib in Resources */,
 				8335FE331B1AFE05005614BE /* MMQuestionViewController.xib in Resources */,
 				8335FDFC1B1AFD0B005614BE /* Images.xcassets in Resources */,
 			);
@@ -376,6 +385,7 @@
 				83F4B3011B22BF8100491108 /* MMUIButton.m in Sources */,
 				8335FDF11B1AFD0B005614BE /* main.m in Sources */,
 				83410E1C1B242EE400AC08FA /* MMQuestionEntity.m in Sources */,
+				83A598E71B2488620040B51F /* MMIndicatorCustomView.m in Sources */,
 				8335FE3B1B1AFF1E005614BE /* MMTopViewController.m in Sources */,
 				83BB839B1B1B6347008A4D99 /* MMResultViewController.m in Sources */,
 				83410E171B2427EB00AC08FA /* MMQuestionFetcher.m in Sources */,

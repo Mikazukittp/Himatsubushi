@@ -20,15 +20,6 @@
 //    return self;
 //}
 //
-//- (id)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        UINib *nib = [UINib nibWithNibName:@"MMQuestionSentenceView" bundle:nil];
-//        self = [nib instantiateWithOwner:self options:nil][0];
-//    }
-//    return self;
-//}
 
 - (void)awakeFromNib
 {
