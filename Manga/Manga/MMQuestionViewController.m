@@ -40,7 +40,7 @@
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
         self.edgesForExtendedLayout = UIRectEdgeNone;
-        
+                
     //データ作成
     [self fetchData];
     
@@ -59,11 +59,11 @@
 
 - (void)fetchData {
     
-    NSBundle* bundle = [NSBundle mainBundle];
-    //読み込むファイルパスを指定
-    NSString* path = [bundle pathForResource:@"OnePiece" ofType:@"plist"];
-    _questions = [[NSMutableArray arrayWithContentsOfFile:path] objectAtIndex:0];
-    
+//    NSBundle* bundle = [NSBundle mainBundle];
+//    //読み込むファイルパスを指定
+//    NSString* path = [bundle pathForResource:@"OnePiece" ofType:@"plist"];
+//    _questions = [[NSMutableArray arrayWithContentsOfFile:path] objectAtIndex:0];
+//    
     __weak MMQuestionViewController *weakSelf = self;
     
     MMQuestionFetcher *fetcher = [[MMQuestionFetcher alloc]init];
@@ -79,21 +79,21 @@
     currentQuestionNumber = 0;
 }
 
-- (NSDictionary *)currentQuestionDictionary {
+- (MMQuestionEntity *)currentQuestionDictionary {
     return [_questions objectAtIndex:currentQuestionNumber];
 }
 
 - (void)setAnswerButtonSentence
 {
-    NSDictionary *question = [self currentQuestionDictionary];
-    _questionSentence.text = [question objectForKey:@"question"];
+   MMQuestionEntity *question = [self currentQuestionDictionary];
+    _questionSentence.text = question.sentence;
 
-    NSArray *choice =  [question objectForKey:@"choice"];
+//    NSArray *choice =  [question objectForKey:@"choice"];
     
-    [_answer1Button setTitle:[choice objectAtIndex:0] forState:UIControlStateNormal];
-    [_answer2Button setTitle:[choice objectAtIndex:1] forState:UIControlStateNormal];
-    [_answer3Button setTitle:[choice objectAtIndex:2] forState:UIControlStateNormal];
-    [_answer4Button setTitle:[choice objectAtIndex:3] forState:UIControlStateNormal];
+    [_answer1Button setTitle:question.select_1 forState:UIControlStateNormal];
+    [_answer2Button setTitle:question.select_2 forState:UIControlStateNormal];
+    [_answer3Button setTitle:question.select_3 forState:UIControlStateNormal];
+    [_answer4Button setTitle:question.select_4 forState:UIControlStateNormal];
 
     _answer1Button.tag = 1;
     _answer2Button.tag = 2;
@@ -107,8 +107,8 @@
     MMUIButton *selectButton = (MMUIButton *)sender;
     
     NSInteger choiceNumber = selectButton.tag;
-    NSDictionary *question = [self currentQuestionDictionary];
-    NSInteger answerNumber = [[question objectForKey:@"answer"] integerValue];
+    MMQuestionEntity *question = [self currentQuestionDictionary];
+    NSInteger answerNumber = question.correct_answer;
     
     if (choiceNumber == answerNumber) {
         NSLog(@"正解");
