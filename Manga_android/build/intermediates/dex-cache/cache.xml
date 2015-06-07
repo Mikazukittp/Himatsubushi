@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/pre-dexed/debug/classes-2408e5320fc8cba6561e46064f7ff29e3b065a4d.jar" />
+    </item>
+    <item
+        jar="/Users/haijimakazuki/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/6.1.0/63735f48b82bcd24cdd33821342428252eb1ca5a/butterknife-6.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/pre-dexed/debug/butterknife-6.1.0-a0d927adbd40ca5b3443fa1c4ac35bef121cd16f.jar" />
+    </item>
+    <item
+        jar="/Users/haijimakazuki/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3f0221b5e7b343848919b75250636e425ce9dcd4.jar" />
+    </item>
+    <item
+        jar="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f4ee8bc815e4c6082bd9bfc7d7ed1f2d6fe4d2bf.jar" />
+    </item>
+    <item
+        jar="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/haijimakazuki/Documents/develop/Manga/app/build/intermediates/pre-dexed/debug/classes-cb5703ecc1c6f909d4547275f6160cb035d8f0ec.jar" />
+    </item>
+
+</items>

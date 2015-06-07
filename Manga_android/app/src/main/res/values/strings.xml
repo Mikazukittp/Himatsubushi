@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NARUTO検定</string>
+    <string name="result_message">お疲れ！</string>
+    <string name="top_link">もう一度チャレンジ！</string>
+</resources>
