@@ -15,7 +15,7 @@
 - (id) init
 {
     if (self = [super init]) {
-//        _questionEntity = [[QPQuestionEntity alloc]init];
+        _questions = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -27,13 +27,16 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
     
     //urlをもとに非道的にデータを取得するメソッド、データ取得後ブロックオブジェクトを実行
-    [self sendAsynchronousByUrl:request block:^(NSArray *questionData,NSError *error){
+    [self sendAsynchronousByUrl:request block:^(NSDictionary *questionData,NSError *error){
         if (!error) {
-            for (NSDictionary *dict in questionData) {
+            NSArray *apiObject = [questionData objectForKey:@"question_array"];
+            for (NSDictionary *dict  in apiObject) {
                 MMQuestionEntity *entity = [[MMQuestionEntity alloc]init];
                 [entity setPropertiesWithDictionary:dict];
-                [_questions addObject:entity];
+                [_questions addObject:entity];  
             }
+//            for (NSDictionary *dict in questionData) {
+//            }
             success();
         }else{
             failed(error);
