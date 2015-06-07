@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37FB00F2C95BB2D2A5C8E1CD"
-               BuildableName = "libPods-Google-Mobile-Ads-SDK.a"
-               BlueprintName = "Pods-Google-Mobile-Ads-SDK"
+               BlueprintIdentifier = "7D208E1233DF8F61F7F536FD"
+               BuildableName = "libPods-MONActivityIndicatorView.a"
+               BlueprintName = "Pods-MONActivityIndicatorView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

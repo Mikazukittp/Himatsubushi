@@ -7,10 +7,11 @@
 //
 
 #import "MMQuestionViewController.h"
-#import "MMTopTableViewCell.h"
 #import "MMQuestionSentenceView.h"
 #import "MMResultViewController.h"
 #import "MMUIButton.h"
+#import "MMQuestionFetcher.h"
+#import "MMQuestionEntity.h"
 
 @import GoogleMobileAds;
 
@@ -43,8 +44,8 @@
     //データ作成
     [self fetchData];
     
-    [self setAnswerButtonSentence];
-    [self adBannerView];
+//    [self setAnswerButtonSentence];
+//    [self adBannerView];
 }
 
 - (void)adBannerView {
@@ -62,6 +63,18 @@
     //読み込むファイルパスを指定
     NSString* path = [bundle pathForResource:@"OnePiece" ofType:@"plist"];
     _questions = [[NSMutableArray arrayWithContentsOfFile:path] objectAtIndex:0];
+    
+    __weak MMQuestionViewController *weakSelf = self;
+    
+    MMQuestionFetcher *fetcher = [[MMQuestionFetcher alloc]init];
+    [fetcher fetchQuestion:^(){
+        _questions = fetcher.questions;
+        [weakSelf setAnswerButtonSentence];
+        [weakSelf adBannerView];
+    }failedBlock:^(NSError *error){
+        NSLog(@"%@",error);
+    }];
+    
     
     currentQuestionNumber = 0;
 }

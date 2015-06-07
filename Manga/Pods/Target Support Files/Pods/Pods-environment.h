@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_Google_Mobile_Ads_SDK 3
 #define COCOAPODS_VERSION_PATCH_Google_Mobile_Ads_SDK 1
 
+// MONActivityIndicatorView
+#define COCOAPODS_POD_AVAILABLE_MONActivityIndicatorView
+#define COCOAPODS_VERSION_MAJOR_MONActivityIndicatorView 0
+#define COCOAPODS_VERSION_MINOR_MONActivityIndicatorView 0
+#define COCOAPODS_VERSION_PATCH_MONActivityIndicatorView 3
+
