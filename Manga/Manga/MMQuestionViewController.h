@@ -10,4 +10,6 @@
 
 @interface MMQuestionViewController : UIViewController
 
+@property  BOOL isFinished;
+
 @end

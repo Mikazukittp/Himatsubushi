@@ -23,6 +23,8 @@
 		83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */; };
 		83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */; };
 		83EA9C031B1B14AF00DBD794 /* MMQuestionSentenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */; };
+		83F4B3011B22BF8100491108 /* MMUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F4B3001B22BF8100491108 /* MMUIButton.m */; };
+		ACD65C7060A38183A00BCFBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B56FB01D4A0CA640E7D90B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301D3437152B3A4567952648 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5468511D18A841F1EE6C1D47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8335FDEB1B1AFD0B005614BE /* Manga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335FDEF1B1AFD0B005614BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8335FDF01B1AFD0B005614BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +66,9 @@
 		83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuestionSentenceView.h; sourceTree = "<group>"; };
 		83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionSentenceView.m; sourceTree = "<group>"; };
 		83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMQuestionSentenceView.xib; sourceTree = "<group>"; };
+		83F4B2FF1B22BF8100491108 /* MMUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUIButton.h; sourceTree = "<group>"; };
+		83F4B3001B22BF8100491108 /* MMUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMUIButton.m; sourceTree = "<group>"; };
+		E4B56FB01D4A0CA640E7D90B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD65C7060A38183A00BCFBD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72D05CBE27747D763E934942 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				301D3437152B3A4567952648 /* Pods.debug.xcconfig */,
+				5468511D18A841F1EE6C1D47 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8335FDE21B1AFD0B005614BE = {
 			isa = PBXGroup;
 			children = (
 				8335FDED1B1AFD0B005614BE /* Manga */,
 				8335FE071B1AFD0B005614BE /* MangaTests */,
 				8335FDEC1B1AFD0B005614BE /* Products */,
+				72D05CBE27747D763E934942 /* Pods */,
+				A86189D4DF96B110763E58FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +183,8 @@
 				83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */,
 				83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */,
 				83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */,
+				83F4B2FF1B22BF8100491108 /* MMUIButton.h */,
+				83F4B3001B22BF8100491108 /* MMUIButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -178,6 +199,14 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		A86189D4DF96B110763E58FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4B56FB01D4A0CA640E7D90B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8335FE0E1B1AFD0B005614BE /* Build configuration list for PBXNativeTarget "Manga" */;
 			buildPhases = (
+				F8551A2869F7755E49A267D7 /* Check Pods Manifest.lock */,
 				8335FDE71B1AFD0B005614BE /* Sources */,
 				8335FDE81B1AFD0B005614BE /* Frameworks */,
 				8335FDE91B1AFD0B005614BE /* Resources */,
+				6F38AB74C4EEF4EFE6193270 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +309,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F38AB74C4EEF4EFE6193270 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8551A2869F7755E49A267D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8335FDE71B1AFD0B005614BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,6 +350,7 @@
 				8335FE351B1AFE05005614BE /* MMQuestionViewController.m in Sources */,
 				83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */,
 				8335FDF41B1AFD0B005614BE /* AppDelegate.m in Sources */,
+				83F4B3011B22BF8100491108 /* MMUIButton.m in Sources */,
 				8335FDF11B1AFD0B005614BE /* main.m in Sources */,
 				8335FE3B1B1AFF1E005614BE /* MMTopViewController.m in Sources */,
 				8335FE341B1AFE05005614BE /* MMTopTableViewCell.m in Sources */,
@@ -407,21 +472,28 @@
 		};
 		8335FE0F1B1AFD0B005614BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 301D3437152B3A4567952648 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ishibe Tatsuya (MNP539ST9Y)";
 				INFOPLIST_FILE = Manga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5aa917b0-7718-4a34-81ba-5dd7c94ab953";
 			};
 			name = Debug;
 		};
 		8335FE101B1AFD0B005614BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5468511D18A841F1EE6C1D47 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Manga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5aa917b0-7718-4a34-81ba-5dd7c94ab953";
 			};
 			name = Release;
 		};

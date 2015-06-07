@@ -27,10 +27,10 @@
 				<string>鉄拳のフルボディ</string>
 			</array>
 			<key>answer</key>
-			<string>2</string>
+			<string>1</string>
 		</dict>
 		<dict>
-			<key>qustion</key>
+			<key>question</key>
 			<string>クソお世話なりました。言った人だれ？</string>
 			<key>choice</key>
 			<array>

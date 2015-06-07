@@ -10,4 +10,6 @@
 
 @interface MMResultViewController : UIViewController
 
+@property (nonatomic,copy)NSString *resultStr;
+
 @end

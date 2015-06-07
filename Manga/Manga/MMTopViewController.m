@@ -8,16 +8,31 @@
 
 #import "MMTopViewController.h"
 #import "MMQuestionViewController.h"
+#import "MMUIButton.h"
+
+@import GoogleMobileAds;
 
 @interface MMTopViewController ()
 
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 @end
 
 @implementation MMTopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self adBannerView];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)adBannerView {
+    
+    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
+
 }
 
 - (IBAction)startButtonTapped:(id)sender {
