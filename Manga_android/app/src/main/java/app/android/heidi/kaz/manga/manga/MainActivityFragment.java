@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +31,7 @@ public class MainActivityFragment extends Fragment {
     @InjectView(R.id.choice2) TextView choice2;
     @InjectView(R.id.choice3) TextView choice3;
     @InjectView(R.id.choice4) TextView choice4;
+    @InjectView(R.id.adView)  AdView mAdView;
 
     Listener mListener;
 
@@ -54,6 +58,10 @@ public class MainActivityFragment extends Fragment {
         questions.add(new Question("ナルトの夢は？", new String[]{"火影", "水影", "土影", "雷影"},0));
         questions.add(new Question("ナルトの技は？", new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"},3));
         questions.add(new Question("ナルトの好物は？", new String[]{"そば", "ラーメン", "うどん", "つけ麺"},1));
+
+        //AdMoの読み込み
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         updateView();
         return view;
