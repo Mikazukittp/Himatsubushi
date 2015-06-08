@@ -18,6 +18,8 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
+import static app.android.heidi.kaz.manga.manga.util.MangaUtil.getKanjiNumber;
+
 
 /**
  * A placeholder fragment containing a simple view.
@@ -32,8 +34,11 @@ public class MainActivityFragment extends Fragment {
     @InjectView(R.id.choice3) TextView choice3;
     @InjectView(R.id.choice4) TextView choice4;
     @InjectView(R.id.adView)  AdView mAdView;
+    @InjectView(R.id.adView_in_list)  AdView mAdViewInList;
 
     Listener mListener;
+
+    AdRequest adRequest = new AdRequest.Builder().build();
 
     int now = 0;
     List<Question> questions = new ArrayList<Question>();
@@ -57,11 +62,7 @@ public class MainActivityFragment extends Fragment {
         //TODO questions初期化
         questions.add(new Question("ナルトの夢は？", new String[]{"火影", "水影", "土影", "雷影"},0));
         questions.add(new Question("ナルトの技は？", new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"},3));
-        questions.add(new Question("ナルトの好物は？", new String[]{"そば", "ラーメン", "うどん", "つけ麺"},1));
-
-        //AdMoの読み込み
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        questions.add(new Question("ナルトの好物は？", new String[]{"そば", "ラーメン", "うどん", "つけ麺"}, 1));
 
         updateView();
         return view;
@@ -105,12 +106,16 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void updateView() {
-        title.setText("第"+(now+1)+"問");
+        title.setText("第"+getKanjiNumber(now+1)+"問");
         sentence.setText(questions.get(now).getSentence());
         choice1.setText(questions.get(now).getChoices()[0]);
         choice2.setText(questions.get(now).getChoices()[1]);
         choice3.setText(questions.get(now).getChoices()[2]);
         choice4.setText(questions.get(now).getChoices()[3]);
+        //AdMobの読み込み
+//        mAdView.setAdSize(AdSize.SMART_BANNER);
+        mAdView.loadAd(adRequest);
+        mAdViewInList.loadAd(adRequest);
     }
 
 }
