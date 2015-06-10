@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.manga;
+package app.android.heidi.kaz.manga;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

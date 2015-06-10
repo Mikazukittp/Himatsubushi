@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.manga;
+package app.android.heidi.kaz.manga;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-import static app.android.heidi.kaz.manga.manga.util.MangaUtil.getKanjiNumber;
+import static app.android.heidi.kaz.manga.util.MangaUtil.getKanjiNumber;
 
 
 /**

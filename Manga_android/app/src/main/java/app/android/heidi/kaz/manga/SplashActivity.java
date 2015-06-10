@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.manga;
+package app.android.heidi.kaz.manga;
 
 import android.app.Activity;
 import android.content.Intent;

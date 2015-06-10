@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.manga;
+package app.android.heidi.kaz.manga;
 
 /**
  * Created by haijimakazuki on 15/06/06.
