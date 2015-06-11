@@ -1,9 +1,13 @@
-package app.android.heidi.kaz.manga;
+package app.android.heidi.kaz.manga.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
+
+import app.android.heidi.kaz.manga.R;
+import app.android.heidi.kaz.manga.ui.fragments.MainActivityFragment;
+import app.android.heidi.kaz.manga.ui.fragments.ScoreFragment;
 
 
 public class MainActivity extends ActionBarActivity implements MainActivityFragment.Listener, ScoreFragment.Listener {
@@ -36,7 +40,6 @@ public class MainActivity extends ActionBarActivity implements MainActivityFragm
     @Override
     public void goToTop() {
         MainActivityFragment fragment = new MainActivityFragment();
-
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fragment, fragment).commit();
     }

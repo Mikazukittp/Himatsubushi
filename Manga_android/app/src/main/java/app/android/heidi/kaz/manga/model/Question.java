@@ -1,19 +1,21 @@
-package app.android.heidi.kaz.manga;
+package app.android.heidi.kaz.manga.model;
+
+import java.util.List;
 
 /**
  * Created by haijimakazuki on 15/06/06.
  */
-public class Question {
+public class Question extends BaseObject{
 
     private String sentence;
-    private String[] choices;
+    private List<String> choices;
     private int answer;
 
     public Question(){
         super();
     }
 
-    public Question(String sentence, String[] choices, int answer) {
+    public Question(String sentence, List<String> choices, int answer) {
         this.sentence = sentence;
         this.choices = choices;
         this.answer = answer;
@@ -31,11 +33,11 @@ public class Question {
         this.sentence = sentence;
     }
 
-    public String[] getChoices() {
+    public List<String> getChoices() {
         return choices;
     }
 
-    public void setChoices(String[] choices) {
+    public void setChoices(List<String> choices) {
         this.choices = choices;
     }
 

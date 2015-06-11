@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga;
+package app.android.heidi.kaz.manga.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import app.android.heidi.kaz.manga.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
