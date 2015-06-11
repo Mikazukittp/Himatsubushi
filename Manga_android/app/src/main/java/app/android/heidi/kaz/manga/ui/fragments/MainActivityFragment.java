@@ -70,7 +70,15 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 select(position);
-                goNext();
+                ResultDialogFragment dialog = new ResultDialogFragment();
+                dialog.setContent(questions.get(now), position);
+                dialog.setListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        goNext();
+                    }
+                });
+                dialog.show(getActivity().getSupportFragmentManager(), "dialog");
             }
         });
         mDialog = Loading.getDialog(getActivity());
