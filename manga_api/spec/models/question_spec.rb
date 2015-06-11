@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-describe String do #本当はQuetionモデルをテストしたい
-  describe "example method" do
-    example 'テスト用' do
-      s = 'aaaa'
-      expect(s.size).to eq(4)
+describe Question do #本当はQuetionモデルをテストしたい
+  describe "question test" do
+    it 'create' do
+      question = Question.create(manga_id: 1, sentence: "sentence", select_1: "sentence",
+       select_2:"sentence", select_3:"sentence",select_4:"sentence",correct_answer: 2)
+
+      expect(question.nil?).to eq(false)
     end
   end
 end
