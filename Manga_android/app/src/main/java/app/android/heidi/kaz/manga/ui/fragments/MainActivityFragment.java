@@ -78,6 +78,7 @@ public class MainActivityFragment extends Fragment {
                         goNext();
                     }
                 });
+                dialog.setCancelable(false);
                 dialog.show(getActivity().getSupportFragmentManager(), "dialog");
             }
         });
