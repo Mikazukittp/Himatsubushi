@@ -8,6 +8,7 @@
 
 #import "MMQuestionFetcher.h"
 #import "MMQuestionEntity.h"
+#import "MMAPIConst.h"
 
 @implementation MMQuestionFetcher
 
@@ -22,11 +23,13 @@
 
 -(void)fetchQuestion:(successAction)success failedBlock:(failedAction)failed
 {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/api/v1/questions/1"];
+    
+    NSURL *url = [NSURL URLWithString:QUESTION_API_URL];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
     
     //urlをもとに非道的にデータを取得するメソッド、データ取得後ブロックオブジェクトを実行
+    
     [self sendAsynchronousByUrl:request block:^(NSDictionary *questionData,NSError *error){
         if (!error) {
             NSArray *apiObject = [questionData objectForKey:@"question_array"];
@@ -35,8 +38,6 @@
                 [entity setPropertiesWithDictionary:dict];
                 [_questions addObject:entity];  
             }
-//            for (NSDictionary *dict in questionData) {
-//            }
             success();
         }else{
             failed(error);

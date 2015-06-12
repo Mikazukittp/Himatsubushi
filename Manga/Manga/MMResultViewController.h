@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+/*!
+ @class MMResultViewController
+ @brief 結果画面
+ @author ishibe tatsuya
+ */
+
 @interface MMResultViewController : UIViewController
 
+/*! @brief スコア*/
 @property (nonatomic,copy)NSString *resultStr;
 
 @end

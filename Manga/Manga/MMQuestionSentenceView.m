@@ -11,16 +11,6 @@
 @implementation MMQuestionSentenceView
 
 
-//- (id)init {
-//    self = [super init];
-//    if (self) {
-//        UINib *nib = [UINib nibWithNibName:@"MMQuestionSentenceView" bundle:nil];
-//        self = [nib instantiateWithOwner:self options:nil][0];
-//    }
-//    return self;
-//}
-//
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];    

@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @class MMIndicatorCustomView
+ @brief インジケータを実装したview
+ @discussion 角丸をカスタマイズした
+ @author ishibe tatsuya
+ */
+
+
 @interface MMIndicatorCustomView : UIView
 
+/*! @brief インジケータスタート */
 - (void)startAnimation;
+/*! @brief インジケータストップ */
 - (void)stopAnimation;
 
 @end

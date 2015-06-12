@@ -1,12 +1,15 @@
 PODS:
+  - DCAnimationKit (0.0.6)
   - Google-Mobile-Ads-SDK (7.3.1)
   - MONActivityIndicatorView (0.0.3)
 
 DEPENDENCIES:
+  - DCAnimationKit
   - Google-Mobile-Ads-SDK
   - MONActivityIndicatorView
 
 SPEC CHECKSUMS:
+  DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
   Google-Mobile-Ads-SDK: 3647bfddc7384c514ab96a8bed86d98b31e623e4
   MONActivityIndicatorView: a00611695de16d956b17d03be25ee49a8effc5f2
 

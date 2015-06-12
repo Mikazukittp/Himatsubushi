@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @class MMQuestionSentenceView
+ @brief 問題文のView
+ @author ishibe tatsuya
+ */
+
 @interface MMQuestionSentenceView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *sentence;

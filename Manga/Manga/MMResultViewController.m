@@ -31,10 +31,17 @@
     _resultLabel.clipsToBounds = true;
     _resultLabel.text = _resultStr;
     
+    [self setBackGroundImage];
     [self adBannerView];
 
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)setBackGroundImage {
+    UIImage *backGroundImage = [UIImage imageNamed:@"TopBackGroundImage"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
+}
+
 
 - (void)adBannerView {
     

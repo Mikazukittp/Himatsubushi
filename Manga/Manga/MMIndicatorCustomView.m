@@ -37,10 +37,12 @@
         
         
         _indicatorView = [[MONActivityIndicatorView alloc] init];
-        _indicatorView.numberOfCircles = 5;
-        _indicatorView.radius = 10;
         _indicatorView.internalSpacing = 3;
         
+        UIImage *backGroundImage = [UIImage imageNamed:@"BackGroundImage"];
+        self.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
+
+
         [customView addSubview:_indicatorView];
         [self placeAtTheCenterWithView:_indicatorView];
     }

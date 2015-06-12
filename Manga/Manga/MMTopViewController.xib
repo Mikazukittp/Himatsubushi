@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
@@ -15,33 +16,28 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
-                    <rect key="frame" x="232" y="104" width="118" height="78"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="78" id="hC7-Kb-6dt"/>
-                    </constraints>
-                    <string key="text">NARUTO
-検定</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                    <color key="textColor" red="0.92941176469999998" green="0.58823529409999997" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywF-0N-nU4" customClass="MMUIButton">
-                    <rect key="frame" x="10" y="362" width="580" height="50"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="165" y="330" width="270" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="dRz-mY-4wg"/>
+                        <constraint firstAttribute="width" constant="270" id="AkA-hz-qZ8"/>
+                        <constraint firstAttribute="height" constant="128" id="dRz-mY-4wg"/>
                     </constraints>
-                    <state key="normal" title="検定を始める">
-                        <color key="titleColor" red="0.92941176469999998" green="0.58823529409999997" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                    <state key="normal" title="開始する" backgroundImage="Makimono">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.87058823529411766" green="0.37254901960784315" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AkA-hz-qZ8"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="startButtonTapped:" destination="-1" eventType="touchUpInside" id="wdA-mo-yH7"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsB-PL-CKN">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfK-fD-6bW" customClass="GADBannerView">
@@ -52,38 +48,50 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ5-lN-OqF">
-                    <rect key="frame" x="0.0" y="415" width="600" height="106"/>
+                    <rect key="frame" x="0.0" y="461" width="600" height="60"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZq-n1-am0">
-                    <rect key="frame" x="0.0" y="248" width="600" height="106"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
+                    <rect key="frame" x="166" y="160" width="250" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="0kw-YI-vf4"/>
+                        <constraint firstAttribute="height" constant="150" id="hC7-Kb-6dt"/>
+                    </constraints>
+                    <string key="text">NARUTO
+検定</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.90682870370000002" blue="0.56545380020000002" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="HZq-n1-am0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4ex-vg-d2g"/>
                 <constraint firstItem="KsB-PL-CKN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5RL-Ik-RYF"/>
                 <constraint firstItem="bfK-fD-6bW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CYG-2S-hXa"/>
                 <constraint firstAttribute="trailing" secondItem="LZ5-lN-OqF" secondAttribute="trailing" id="Cf8-ur-ogb"/>
                 <constraint firstAttribute="trailing" secondItem="ywF-0N-nU4" secondAttribute="trailing" constant="10" id="ERh-dR-Iyd"/>
                 <constraint firstAttribute="bottom" secondItem="bfK-fD-6bW" secondAttribute="bottom" id="FUV-oC-XvU"/>
                 <constraint firstItem="ywF-0N-nU4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="FoG-Zq-2mo"/>
-                <constraint firstItem="hb3-oJ-lEV" firstAttribute="top" secondItem="KsB-PL-CKN" secondAttribute="bottom" constant="-2" id="JhB-QA-oz0"/>
+                <constraint firstItem="hb3-oJ-lEV" firstAttribute="top" secondItem="KsB-PL-CKN" secondAttribute="bottom" constant="100" id="JhB-QA-oz0"/>
                 <constraint firstAttribute="trailing" secondItem="bfK-fD-6bW" secondAttribute="trailing" id="ONL-xA-RGk"/>
                 <constraint firstItem="LZ5-lN-OqF" firstAttribute="top" secondItem="ywF-0N-nU4" secondAttribute="bottom" constant="3" id="Pg1-oF-iaD"/>
                 <constraint firstAttribute="trailing" secondItem="KsB-PL-CKN" secondAttribute="trailing" id="SGE-BX-1nZ"/>
-                <constraint firstItem="ywF-0N-nU4" firstAttribute="top" secondItem="HZq-n1-am0" secondAttribute="bottom" constant="8" id="V4b-oV-IuC"/>
+                <constraint firstItem="ywF-0N-nU4" firstAttribute="top" secondItem="hb3-oJ-lEV" secondAttribute="bottom" constant="20" id="ZuV-sc-COL"/>
                 <constraint firstItem="LZ5-lN-OqF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dEa-io-3Ce"/>
-                <constraint firstItem="LZ5-lN-OqF" firstAttribute="height" secondItem="HZq-n1-am0" secondAttribute="height" id="ezi-vY-D7u"/>
                 <constraint firstItem="bfK-fD-6bW" firstAttribute="top" secondItem="LZ5-lN-OqF" secondAttribute="bottom" constant="29" id="ktb-XM-DpK"/>
                 <constraint firstItem="LZ5-lN-OqF" firstAttribute="height" secondItem="KsB-PL-CKN" secondAttribute="height" id="lVd-Cz-TKD"/>
                 <constraint firstAttribute="centerX" secondItem="ywF-0N-nU4" secondAttribute="centerX" id="nTn-nu-IPq"/>
-                <constraint firstAttribute="trailing" secondItem="HZq-n1-am0" secondAttribute="trailing" id="ohL-xn-x6q"/>
                 <constraint firstAttribute="centerX" secondItem="hb3-oJ-lEV" secondAttribute="centerX" constant="9" id="sdY-mK-YBP"/>
                 <constraint firstItem="KsB-PL-CKN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wjN-so-aOU"/>
-                <constraint firstItem="HZq-n1-am0" firstAttribute="top" secondItem="hb3-oJ-lEV" secondAttribute="bottom" constant="66" id="xWZ-YI-gKd"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ERh-dR-Iyd"/>
+                    <exclude reference="FoG-Zq-2mo"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="Makimono" width="270" height="129"/>
+    </resources>
 </document>

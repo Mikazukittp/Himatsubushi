@@ -6,6 +6,12 @@
 // project.
 
 
+// DCAnimationKit
+#define COCOAPODS_POD_AVAILABLE_DCAnimationKit
+#define COCOAPODS_VERSION_MAJOR_DCAnimationKit 0
+#define COCOAPODS_VERSION_MINOR_DCAnimationKit 0
+#define COCOAPODS_VERSION_PATCH_DCAnimationKit 6
+
 // Google-Mobile-Ads-SDK
 #define COCOAPODS_POD_AVAILABLE_Google_Mobile_Ads_SDK
 #define COCOAPODS_VERSION_MAJOR_Google_Mobile_Ads_SDK 7

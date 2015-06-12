@@ -97,7 +97,7 @@
     self.radius = 10;
     self.delay = 0.2;
     self.duration = 0.8;
-    self.defaultColor = [UIColor lightGrayColor];
+    self.defaultColor = [UIColor whiteColor];
 }
 
 - (UIView *)createCircleWithRadius:(CGFloat)radius

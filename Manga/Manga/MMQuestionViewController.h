@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @class MMQuestionViewController
+ @brief 問題の処理を行うviewController
+ @author ishibe tatsuya
+ */
+
 @interface MMQuestionViewController : UIViewController
 
 @property  BOOL isFinished;

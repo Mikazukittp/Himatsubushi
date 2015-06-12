@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @class MMTopViewController
+ @brief トップ画面
+ @author ishibe tatsuya
+ */
+
+
 @interface MMTopViewController : UIViewController
 
 @end
