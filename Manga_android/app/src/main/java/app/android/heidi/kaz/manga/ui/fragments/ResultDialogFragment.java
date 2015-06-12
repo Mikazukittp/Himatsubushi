@@ -67,12 +67,13 @@ public class ResultDialogFragment extends DialogFragment {
 
     public void setContent(Question question, int select){
         mResultText = "";
-        if(question.getAnswer() == select) {
+        int correctIndex = question.getCorrectAnswerIndex();
+        if(correctIndex == select) {
             mResultText += "正解!!";
         }else{
             mResultText += "不正解\n";
-            mResultText += "o " + question.getChoices().get(question.getAnswer()) +"\n";
-            mResultText += "x " + question.getChoices().get(select);
+            mResultText += "o " + question.getSelects().get(correctIndex) +"\n";
+            mResultText += "x " + question.getSelects().get(select);
         }
     }
 

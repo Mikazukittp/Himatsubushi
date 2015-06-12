@@ -98,7 +98,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void select(int choice) {
-        if(choice==questions.get(now).getAnswer()) mScore++;
+        if(choice==questions.get(now).getCorrectAnswerIndex()) mScore++;
     }
 
     public void goNext() {
@@ -113,7 +113,7 @@ public class MainActivityFragment extends Fragment {
     public void updateView() {
         title.setText("第" + getKanjiNumber(now + 1) + "問");
         sentence.setText(questions.get(now).getSentence());
-        mAdapter.setChoices(questions.get(now).getChoices());
+        mAdapter.setChoices(questions.get(now).getSelects());
         mAdapter.notifyDataSetChanged();
 
         //AdMobの読み込み
@@ -131,16 +131,17 @@ public class MainActivityFragment extends Fragment {
         @Override
         public void onSuccess(BaseResponse response) {
             Log.d("rest", "onSuccess!!!");
-            questions = (List<Question>)response.getData();
+            questions = (List<Question>)response.getQuestionArray();
             updateView();
             dismissProgress();
         }
         @Override
         public void onFailure(RetrofitError error) {
             Log.d("rest", "onFailure!!!");
-            questions.add(new Question("ナルトの夢は？", Arrays.asList(new String[]{"火影", "水影", "土影", "雷影"}), 0));
-            questions.add(new Question("ナルトの技は？", Arrays.asList(new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"}),3));
-            questions.add(new Question("ナルトの好物は？", Arrays.asList(new String[]{"そば", "ラーメン", "うどん", "つけ麺"}), 1));
+            Log.d("!!!!!!!!!!", error.getMessage());
+            questions.add(new Question("ナルトの夢は？", Arrays.asList(new String[]{"火影", "水影", "土影", "雷影"}), 1));
+            questions.add(new Question("ナルトの技は？", Arrays.asList(new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"}),4));
+            questions.add(new Question("ナルトの好物は？", Arrays.asList(new String[]{"そば", "ラーメン", "うどん", "つけ麺"}), 2));
             updateView();
             dismissProgress();
         }

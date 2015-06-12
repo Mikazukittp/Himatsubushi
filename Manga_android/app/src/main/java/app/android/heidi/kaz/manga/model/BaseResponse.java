@@ -7,12 +7,19 @@ import java.util.List;
  */
 public class BaseResponse {
 
-    int status;
-    String message;
-    List<BaseObject> data;
+    //    int status;
+//    String message;
+//    List<? extends BaseObject> questionArray;
+    List<Question> questionArray;
 
-    public List<? extends BaseObject> getData() {
-        return this.data;
+//    public List<? extends BaseObject> getQuestionArray() {
+    public List<Question> getQuestionArray() {
+        return this.questionArray;
     }
+//    public void setQuestionArray(List<? extends BaseObject> questionArray) {
+    public void setQuestionArray(List<Question> questionArray) {
+        this.questionArray = questionArray;
+    }
+
 
 }

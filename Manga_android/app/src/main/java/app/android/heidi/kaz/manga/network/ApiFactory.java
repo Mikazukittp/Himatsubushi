@@ -3,9 +3,7 @@ package app.android.heidi.kaz.manga.network;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.internal.bind.DateTypeAdapter;
 
-import app.android.heidi.kaz.manga.model.BaseResponse;
 import retrofit.RestAdapter;
 import retrofit.converter.GsonConverter;
 
@@ -20,11 +18,11 @@ public class ApiFactory {
         if(mApiService == null) {
             Gson gson = new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-                    .registerTypeAdapter(BaseResponse.class, new DateTypeAdapter())
+//                    .registerTypeAdapter(BaseResponse.class, new DateTypeAdapter())
                     .create();
 
             RestAdapter restAdapter = new RestAdapter.Builder()
-                    .setEndpoint("http:/domain/path/to/api")
+                    .setEndpoint("http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1")
                     .setConverter(new GsonConverter(gson))
                     .build();
             return restAdapter.create(ApiService.class);
