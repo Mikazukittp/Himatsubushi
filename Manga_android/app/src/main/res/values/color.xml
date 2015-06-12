@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#FFA726</color>
-    <color name="primary_dark">#FB8C00</color>
+    <color name="primary">#ffa726</color>
+    <color name="primary_dark">#fb8c00</color>
+    <color name="white">#fff</color>
+    <color name="light_gray">#dcdcdc</color>
+    <color name="gray">#ccc</color>
+    <color name="dark_gray">#666</color>
 </resources>
 

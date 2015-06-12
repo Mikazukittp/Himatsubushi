@@ -84,11 +84,8 @@ public class MainActivityFragment extends Fragment {
         });
         mDialog = Loading.getDialog(getActivity());
         mDialog.show();
-
         mListener = (Listener)getActivity();
-
         ApiFactory.createApiService().getQuestions(1, new RequestCallback<BaseResponse>(new ResponseListener()));
-
         return view;
     }
 

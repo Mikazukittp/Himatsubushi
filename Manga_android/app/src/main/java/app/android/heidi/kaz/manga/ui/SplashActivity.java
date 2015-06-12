@@ -10,6 +10,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import app.android.heidi.kaz.manga.R;
+import app.android.heidi.kaz.manga.util.ImageButtonClickedEffectListener;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -17,7 +18,7 @@ import butterknife.OnClick;
 
 public class SplashActivity extends Activity {
 
-    @InjectView(R.id.start) ImageButton start;
+    @InjectView(R.id.start) ImageButton mStart;
     @InjectView(R.id.adView) AdView mAdView;
     AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -28,7 +29,9 @@ public class SplashActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         ButterKnife.inject(this);
+        mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
         mAdView.loadAd(adRequest);
+
     }
 
     @OnClick(R.id.start)

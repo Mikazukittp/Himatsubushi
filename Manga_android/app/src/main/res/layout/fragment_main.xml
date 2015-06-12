@@ -17,7 +17,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:text="第何問"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -28,7 +30,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:text="問題文"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -37,23 +41,26 @@
         android:id="@+id/sentence"
         android:layout_below="@+id/title" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/choice_list"
-        android:layout_below="@+id/sentence"
-        tools:listitem="@android:layout/simple_list_item_1"
-        android:layout_alignParentBottom="true" />
-
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView_in_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="false"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_marginBottom="@dimen/activity_vertical_small_margin"
+        android:layout_above="@+id/choice_list">
     </com.google.android.gms.ads.AdView>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice_list"
+        tools:listitem="@android:layout/simple_list_item_1"
+        android:layout_alignParentBottom="false"
+        android:divider="@null"
+        android:layout_above="@+id/adView" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

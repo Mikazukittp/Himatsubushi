@@ -24,10 +24,11 @@ import butterknife.OnClick;
 
 public class ResultDialogFragment extends DialogFragment {
 
-    @InjectView(R.id.title) TextView title;
-    @InjectView(R.id.message) TextView message;
+    @InjectView(R.id.title) TextView mTitle;
+    @InjectView(R.id.sentence) TextView mSentence;
+    @InjectView(R.id.answer) TextView mAnswer;
 
-    private String mResultText;
+    private String mResultTitle, mResultSentence, mResultAnswer;
 
     private OnClickListener mListener;
 
@@ -40,18 +41,14 @@ public class ResultDialogFragment extends DialogFragment {
         dialog.setOnKeyListener(new OnKeyListener() {
             @Override
             public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK) {
-                    return true;
-                }
-                return false;
+                return keyCode == KeyEvent.KEYCODE_BACK;
             }
         });
-
         dialog.setContentView(R.layout.result_dialog);
-
         ButterKnife.inject(this, dialog.getWindow().getDecorView());
-
-        message.setText(mResultText);
+        mTitle.setText(mResultTitle);
+        mSentence.setText(mResultSentence);
+        mAnswer.setText(mResultAnswer);
         return dialog;
     }
 
@@ -66,14 +63,14 @@ public class ResultDialogFragment extends DialogFragment {
     }
 
     public void setContent(Question question, int select){
-        mResultText = "";
         int correctIndex = question.getCorrectAnswerIndex();
+        mResultTitle = (correctIndex == select)? "正解": "不正解";
+        mResultSentence = question.getSentence();
         if(correctIndex == select) {
-            mResultText += "正解!!";
+            mResultAnswer = "O : " + question.getSelects().get(select);
         }else{
-            mResultText += "不正解\n";
-            mResultText += "o " + question.getSelects().get(correctIndex) +"\n";
-            mResultText += "x " + question.getSelects().get(select);
+            mResultAnswer = "X : " + question.getSelects().get(select) +"\n";
+            mResultAnswer += "O : " + question.getSelects().get(correctIndex);
         }
     }
 
