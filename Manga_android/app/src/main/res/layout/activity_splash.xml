@@ -39,9 +39,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_above="@+id/adView"
-        android:layout_centerHorizontal="true">
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/license">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -62,6 +65,15 @@
             android:layout_centerInParent="true"
             android:textColor="#000" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/license"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lisence"
+        android:textColor="@color/white"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentRight="true" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
