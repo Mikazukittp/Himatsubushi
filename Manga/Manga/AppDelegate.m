@@ -29,10 +29,12 @@
     barButton.title = @"戻る";
     viewController.navigationItem.backBarButtonItem = barButton;
 
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.933 green:0.588 blue:0.000 alpha:1.000];
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.871 green:0.373 blue:0.000 alpha:1.000];
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
 
+    [nc setNavigationBarHidden:NO animated:NO];
+    
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
 

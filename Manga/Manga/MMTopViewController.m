@@ -9,6 +9,7 @@
 #import "MMTopViewController.h"
 #import "MMQuestionViewController.h"
 #import "MMUIButton.h"
+#import "MMInfoViewController.h"
 
 @import GoogleMobileAds;
 
@@ -21,10 +22,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    [self setBackGroundImage];
     
     [self adBannerView];
     
-    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)setBackGroundImage {
+    UIImage *backGroundImage = [UIImage imageNamed:@"TopBackGroundImage"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
 }
 
 - (void)adBannerView {
@@ -39,6 +52,14 @@
     
     MMQuestionViewController *vc = [MMQuestionViewController new];
     [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+}
+- (IBAction)infoButtonTapped:(id)sender {
+    MMInfoViewController *vc = [MMInfoViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     
 }
 

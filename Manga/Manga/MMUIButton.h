@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @class MMUIButton
+ @brief 選択肢ボタン
+ @discussion 角丸をカスタマイズした
+ @author ishibe tatsuya
+ */
+
 @interface MMUIButton : UIButton
 
 @end

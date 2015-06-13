@@ -18,6 +18,7 @@
     _select_3 = [dict objectForKey:@"select_3"];
     _select_4 = [dict objectForKey:@"select_4"];
     _correct_answer = [[dict objectForKey:@"correct_answer"] intValue];
+    _collectString = [dict objectForKey:[NSString stringWithFormat:@"select_%d",_correct_answer]];
 }
 
 @end
