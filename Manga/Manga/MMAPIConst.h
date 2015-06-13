@@ -21,7 +21,7 @@
 #elif DEBUG & LOCAL_DATA
 #define QUESTION_API_URL @"OnePiece.plist"
 #else
-#define QUESTION_API_URL @"http://localhost:3000/api/v1/questions/1"
+#define QUESTION_API_URL @"http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/1"
 #endif
 
 @end

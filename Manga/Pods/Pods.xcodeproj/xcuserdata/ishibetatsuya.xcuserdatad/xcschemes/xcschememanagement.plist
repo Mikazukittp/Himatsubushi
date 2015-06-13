@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-DCAnimationKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Google-Mobile-Ads-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>34ECC5A35DE57D4733867224</key>
+		<key>1AEBFB165B1C24195888F6FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6494EB77325B9D6515384744</key>
+		<key>C197F28CAD5CB026ED2EB5F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77EFEA013D4177CEE55BF2DE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EAA6B9A0F290399425441969</key>
+		<key>D9A8375FD15C252F5C566AF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

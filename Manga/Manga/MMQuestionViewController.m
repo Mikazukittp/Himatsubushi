@@ -7,7 +7,6 @@
 //
 
 #import "MMQuestionViewController.h"
-#import "MMQuestionSentenceView.h"
 #import "MMResultViewController.h"
 #import "MMUIButton.h"
 #import "MMQuestionFetcher.h"
@@ -15,7 +14,6 @@
 #import "MMIndicatorCustomView.h"
 #import "MONActivityIndicatorView.h"
 #import "MMAnswerActionView.h"
-#import <DCAnimationKit/UIView+DCAnimationKit.h>
 
 @import GoogleMobileAds;
 

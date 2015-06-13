@@ -21,13 +21,13 @@
 		83410E141B24233600AC08FA /* MMBaseFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E131B24233600AC08FA /* MMBaseFetcher.m */; };
 		83410E171B2427EB00AC08FA /* MMQuestionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E161B2427EB00AC08FA /* MMQuestionFetcher.m */; };
 		83410E1C1B242EE400AC08FA /* MMQuestionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 83410E1B1B242EE400AC08FA /* MMQuestionEntity.m */; };
+		834C4B791B2BD2650082141B /* MMInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834C4B771B2BD2650082141B /* MMInfoViewController.m */; };
+		834C4B7A1B2BD2650082141B /* MMInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834C4B781B2BD2650082141B /* MMInfoViewController.xib */; };
 		83A598E41B24884F0040B51F /* MMIndicatorCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A598E31B24884F0040B51F /* MMIndicatorCustomView.xib */; };
 		83A598E71B2488620040B51F /* MMIndicatorCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A598E61B2488620040B51F /* MMIndicatorCustomView.m */; };
 		83BB839B1B1B6347008A4D99 /* MMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB83991B1B6347008A4D99 /* MMResultViewController.m */; };
 		83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */; };
 		83CBB36C1B29AD8F002BF064 /* MMAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CBB36B1B29AD8F002BF064 /* MMAPIConst.m */; };
-		83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */; };
-		83EA9C031B1B14AF00DBD794 /* MMQuestionSentenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */; };
 		83F4B3011B22BF8100491108 /* MMUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F4B3001B22BF8100491108 /* MMUIButton.m */; };
 		ACD65C7060A38183A00BCFBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B56FB01D4A0CA640E7D90B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +70,9 @@
 		83410E161B2427EB00AC08FA /* MMQuestionFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionFetcher.m; sourceTree = "<group>"; };
 		83410E1A1B242EE400AC08FA /* MMQuestionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuestionEntity.h; sourceTree = "<group>"; };
 		83410E1B1B242EE400AC08FA /* MMQuestionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionEntity.m; sourceTree = "<group>"; };
+		834C4B761B2BD2650082141B /* MMInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMInfoViewController.h; sourceTree = "<group>"; };
+		834C4B771B2BD2650082141B /* MMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMInfoViewController.m; sourceTree = "<group>"; };
+		834C4B781B2BD2650082141B /* MMInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMInfoViewController.xib; sourceTree = "<group>"; };
 		83A598E31B24884F0040B51F /* MMIndicatorCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMIndicatorCustomView.xib; sourceTree = "<group>"; };
 		83A598E51B2488620040B51F /* MMIndicatorCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIndicatorCustomView.h; sourceTree = "<group>"; };
 		83A598E61B2488620040B51F /* MMIndicatorCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIndicatorCustomView.m; sourceTree = "<group>"; };
@@ -78,9 +81,6 @@
 		83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMResultViewController.xib; sourceTree = "<group>"; };
 		83CBB36A1B29AD8F002BF064 /* MMAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAPIConst.h; sourceTree = "<group>"; };
 		83CBB36B1B29AD8F002BF064 /* MMAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAPIConst.m; sourceTree = "<group>"; };
-		83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMQuestionSentenceView.h; sourceTree = "<group>"; };
-		83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQuestionSentenceView.m; sourceTree = "<group>"; };
-		83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMQuestionSentenceView.xib; sourceTree = "<group>"; };
 		83F4B2FF1B22BF8100491108 /* MMUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUIButton.h; sourceTree = "<group>"; };
 		83F4B3001B22BF8100491108 /* MMUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMUIButton.m; sourceTree = "<group>"; };
 		E4B56FB01D4A0CA640E7D90B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +188,9 @@
 				83BB83981B1B6347008A4D99 /* MMResultViewController.h */,
 				83BB83991B1B6347008A4D99 /* MMResultViewController.m */,
 				83BB839A1B1B6347008A4D99 /* MMResultViewController.xib */,
+				834C4B761B2BD2650082141B /* MMInfoViewController.h */,
+				834C4B771B2BD2650082141B /* MMInfoViewController.m */,
+				834C4B781B2BD2650082141B /* MMInfoViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,9 +198,6 @@
 		8335FE151B1AFD5B005614BE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				83EA9BFF1B1B14A300DBD794 /* MMQuestionSentenceView.h */,
-				83EA9C001B1B14A300DBD794 /* MMQuestionSentenceView.m */,
-				83EA9C021B1B14AF00DBD794 /* MMQuestionSentenceView.xib */,
 				83F4B2FF1B22BF8100491108 /* MMUIButton.h */,
 				83F4B3001B22BF8100491108 /* MMUIButton.m */,
 				83A598E51B2488620040B51F /* MMIndicatorCustomView.h */,
@@ -338,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EA9C031B1B14AF00DBD794 /* MMQuestionSentenceView.xib in Resources */,
 				8335FE3C1B1AFF1E005614BE /* MMTopViewController.xib in Resources */,
 				83BB839C1B1B6347008A4D99 /* MMResultViewController.xib in Resources */,
+				834C4B7A1B2BD2650082141B /* MMInfoViewController.xib in Resources */,
 				8335FE3E1B1AFF3B005614BE /* OnePiece.plist in Resources */,
 				8312A66A1B25F4CD00D5D4AD /* MMAnswerActionView.xib in Resources */,
 				83A598E41B24884F0040B51F /* MMIndicatorCustomView.xib in Resources */,
@@ -398,7 +398,7 @@
 			files = (
 				83410E141B24233600AC08FA /* MMBaseFetcher.m in Sources */,
 				8335FE351B1AFE05005614BE /* MMQuestionViewController.m in Sources */,
-				83EA9C011B1B14A300DBD794 /* MMQuestionSentenceView.m in Sources */,
+				834C4B791B2BD2650082141B /* MMInfoViewController.m in Sources */,
 				8335FDF41B1AFD0B005614BE /* AppDelegate.m in Sources */,
 				83F4B3011B22BF8100491108 /* MMUIButton.m in Sources */,
 				83CBB36C1B29AD8F002BF064 /* MMAPIConst.m in Sources */,
@@ -448,6 +448,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -492,7 +493,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

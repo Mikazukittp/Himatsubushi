@@ -9,6 +9,7 @@
 #import "MMTopViewController.h"
 #import "MMQuestionViewController.h"
 #import "MMUIButton.h"
+#import "MMInfoViewController.h"
 
 @import GoogleMobileAds;
 
@@ -52,6 +53,13 @@
     MMQuestionViewController *vc = [MMQuestionViewController new];
     [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+}
+- (IBAction)infoButtonTapped:(id)sender {
+    MMInfoViewController *vc = [MMInfoViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     
 }
 

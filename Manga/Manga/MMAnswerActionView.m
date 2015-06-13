@@ -7,7 +7,6 @@
 //
 
 #import "MMAnswerActionView.h"
-#import <DCAnimationKit/UIView+DCAnimationKit.h>
 
 @interface MMAnswerActionView ()
 
