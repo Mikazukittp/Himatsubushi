@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admin_users
   namespace :api do
     namespace :v1 do
       get 'questions/:id' => 'question#return_array'
