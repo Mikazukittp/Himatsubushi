@@ -1,5 +1,6 @@
 package app.android.heidi.kaz.manga.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -39,9 +40,9 @@ public class MainActivity extends ActionBarActivity implements MainActivityFragm
 
     @Override
     public void goToTop() {
-        MainActivityFragment fragment = new MainActivityFragment();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fragment, fragment).commit();
+        Intent intent = new Intent(this, SplashActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 }
