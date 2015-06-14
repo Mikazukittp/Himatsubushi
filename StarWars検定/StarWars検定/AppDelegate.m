@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MMTopViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    MMTopViewController *viewController = [[MMTopViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:viewController];
+    viewController.title = @"NARUTO検定";
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"戻る";
+    viewController.navigationItem.backBarButtonItem = barButton;
+    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.871 green:0.373 blue:0.000 alpha:1.000];
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    
+    [nc setNavigationBarHidden:NO animated:NO];
+    
+    self.window.rootViewController = nc;
+    [self.window makeKeyAndVisible];
+    
+    
+    return YES;
+
+    
     return YES;
 }
 
