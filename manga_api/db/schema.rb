@@ -11,16 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606082541) do
+ActiveRecord::Schema.define(version: 20150613110827) do
+
+  create_table "admin_users", force: true do |t|
+    t.string   "email",               default: "", null: false
+    t.string   "encrypted_password",  default: "", null: false
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",       default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
 
   create_table "questions", force: true do |t|
-    t.integer  "manga_id"
-    t.string   "sentence"
-    t.string   "select_1"
-    t.string   "select_2"
-    t.string   "select_3"
-    t.string   "select_4"
-    t.integer  "correct_answer"
+    t.integer  "manga_id",       null: false
+    t.string   "sentence",       null: false
+    t.string   "select_1",       null: false
+    t.string   "select_2",       null: false
+    t.string   "select_3",       null: false
+    t.string   "select_4",       null: false
+    t.integer  "correct_answer", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
