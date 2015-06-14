@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui;
+package app.android.ttp.mikazuki.manga.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,22 +6,19 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import app.android.heidi.kaz.manga.R;
-import app.android.heidi.kaz.manga.util.ImageButtonClickedEffectListener;
+import app.android.ttp.mikazuki.manga.R;
+import app.android.ttp.mikazuki.manga.util.AdMobHandler;
+import app.android.ttp.mikazuki.manga.util.ImageButtonClickedEffectListener;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-
 
 public class SplashActivity extends Activity {
 
     @InjectView(R.id.start) ImageButton mStart;
     @InjectView(R.id.adView) AdView mAdView;
-    AdRequest adRequest = new AdRequest.Builder().build();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +27,7 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         ButterKnife.inject(this);
         mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
-        mAdView.loadAd(adRequest);
-
+        mAdView.loadAd(AdMobHandler.getAdRequest());
     }
 
     @OnClick(R.id.start)

@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui.fragments;
+package app.android.ttp.mikazuki.manga.ui.fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -14,13 +14,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import app.android.heidi.kaz.manga.R;
-import app.android.heidi.kaz.manga.model.Question;
+import app.android.ttp.mikazuki.manga.R;
+import app.android.ttp.mikazuki.manga.model.Question;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-;
 
 public class ResultDialogFragment extends DialogFragment {
 

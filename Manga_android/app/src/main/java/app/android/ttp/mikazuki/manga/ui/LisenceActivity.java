@@ -1,10 +1,10 @@
-package app.android.heidi.kaz.manga.ui;
+package app.android.ttp.mikazuki.manga.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import app.android.heidi.kaz.manga.R;
+import app.android.ttp.mikazuki.manga.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 

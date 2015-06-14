@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.network;
+package app.android.ttp.mikazuki.manga.network;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;

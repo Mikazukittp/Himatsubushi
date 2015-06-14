@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.util;
+package app.android.ttp.mikazuki.manga.util;
 
 /**
  * Created by haijimakazuki on 15/06/07.

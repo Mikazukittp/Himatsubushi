@@ -48,7 +48,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="false"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
+        ads:adUnitId="@string/banner_ad_unit_id_main_middle"
         android:layout_marginBottom="@dimen/activity_vertical_small_margin"
         android:layout_above="@+id/choice_list">
     </com.google.android.gms.ads.AdView>
@@ -69,7 +69,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+        ads:adUnitId="@string/banner_ad_unit_id_main_bottom">
     </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
-package app.android.heidi.kaz.manga.network;
+package app.android.ttp.mikazuki.manga.network;
 
-import app.android.heidi.kaz.manga.model.BaseResponse;
+import app.android.ttp.mikazuki.manga.model.BaseResponse;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;

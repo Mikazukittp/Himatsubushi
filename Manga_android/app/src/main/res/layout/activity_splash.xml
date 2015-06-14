@@ -4,7 +4,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.android.heidi.kaz.manga.manga.SplashActivity">
+    tools:context=".SplashActivity">
 
 
     <ImageView
@@ -53,8 +53,7 @@
             android:src="@drawable/makimono"
             android:scaleType="fitXY"
             android:background="@null"
-            android:adjustViewBounds="true"
-            android:layout_centerInParent="true" />
+            android:adjustViewBounds="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +81,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+        ads:adUnitId="@string/banner_ad_unit_id_top">
     </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

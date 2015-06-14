@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.model;
+package app.android.ttp.mikazuki.manga.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui;
+package app.android.ttp.mikazuki.manga.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import app.android.heidi.kaz.manga.R;
+import app.android.ttp.mikazuki.manga.R;
 
 /**
  * Created by haijimakazuki on 15/06/11.

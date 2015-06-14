@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui;
+package app.android.ttp.mikazuki.manga.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
-import app.android.heidi.kaz.manga.R;
-import app.android.heidi.kaz.manga.ui.fragments.MainActivityFragment;
-import app.android.heidi.kaz.manga.ui.fragments.ScoreFragment;
+import app.android.ttp.mikazuki.manga.R;
+import app.android.ttp.mikazuki.manga.ui.fragments.MainActivityFragment;
+import app.android.ttp.mikazuki.manga.ui.fragments.ScoreFragment;
 
 
 public class MainActivity extends ActionBarActivity implements MainActivityFragment.Listener, ScoreFragment.Listener {

@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.manga;
+package app.android.ttp.mikazuki.manga;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

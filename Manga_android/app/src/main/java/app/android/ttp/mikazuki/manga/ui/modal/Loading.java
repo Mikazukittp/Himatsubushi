@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui.modal;
+package app.android.ttp.mikazuki.manga.ui.modal;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,7 +7,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.Window;
 import android.view.WindowManager;
 
-import app.android.heidi.kaz.manga.R;
+import app.android.ttp.mikazuki.manga.R;
+
 
 /**
  * Created by haijimakazuki on 15/06/11.

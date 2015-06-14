@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.util;
+package app.android.ttp.mikazuki.manga.util;
 
 import android.graphics.Color;
 import android.view.MotionEvent;

@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui.fragments;
+package app.android.ttp.mikazuki.manga.ui.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,13 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import app.android.heidi.kaz.manga.R;
+import app.android.ttp.mikazuki.manga.R;
+import app.android.ttp.mikazuki.manga.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+
 
 
 /**
@@ -28,7 +29,6 @@ public class ScoreFragment extends Fragment {
     @InjectView(R.id.adView) AdView mAdView;
 
     Listener mListener;
-    AdRequest adRequest = new AdRequest.Builder().build();
 
     public ScoreFragment() {
     }
@@ -44,7 +44,7 @@ public class ScoreFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_score, container, false);
         ButterKnife.inject(this, view);
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(AdMobHandler.getAdRequest());
         return view;
     }
 

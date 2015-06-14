@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.model;
+package app.android.ttp.mikazuki.manga.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by haijimakazuki on 15/06/06.
  */
-public class Question extends BaseObject{
+public class Question extends BaseObject {
 
     private int id;
     private int manga_id;

@@ -1,4 +1,4 @@
-package app.android.heidi.kaz.manga.ui.fragments;
+package app.android.ttp.mikazuki.manga.ui.fragments;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -11,26 +11,25 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import app.android.heidi.kaz.manga.R;
-import app.android.heidi.kaz.manga.model.BaseResponse;
-import app.android.heidi.kaz.manga.model.Question;
-import app.android.heidi.kaz.manga.network.ApiFactory;
-import app.android.heidi.kaz.manga.network.RequestCallback;
-import app.android.heidi.kaz.manga.network.RequestListener;
-import app.android.heidi.kaz.manga.ui.ChoiceAdapter;
-import app.android.heidi.kaz.manga.ui.modal.Loading;
+import app.android.ttp.mikazuki.manga.R;
+import app.android.ttp.mikazuki.manga.model.BaseResponse;
+import app.android.ttp.mikazuki.manga.model.Question;
+import app.android.ttp.mikazuki.manga.network.ApiFactory;
+import app.android.ttp.mikazuki.manga.network.RequestCallback;
+import app.android.ttp.mikazuki.manga.network.RequestListener;
+import app.android.ttp.mikazuki.manga.ui.ChoiceAdapter;
+import app.android.ttp.mikazuki.manga.ui.modal.Loading;
+import app.android.ttp.mikazuki.manga.util.AdMobHandler;
+import app.android.ttp.mikazuki.manga.util.MangaUtil;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import retrofit.RetrofitError;
-
-import static app.android.heidi.kaz.manga.util.MangaUtil.getKanjiNumber;
 
 
 /**
@@ -45,7 +44,6 @@ public class MainActivityFragment extends Fragment {
     @InjectView(R.id.adView_in_list)  AdView mAdViewInList;
 
     private Dialog mDialog;
-    AdRequest adRequest = new AdRequest.Builder().build();
     Listener mListener;
     List<Question> questions = new ArrayList<Question>();
 
@@ -109,14 +107,14 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void updateView() {
-        title.setText("第" + getKanjiNumber(now + 1) + "問");
+        title.setText("第" + MangaUtil.getKanjiNumber(now + 1) + "問");
         sentence.setText(questions.get(now).getSentence());
         mAdapter.setChoices(questions.get(now).getSelects());
         mAdapter.notifyDataSetChanged();
 
         //AdMobの読み込み
-        mAdView.loadAd(adRequest);
-        mAdViewInList.loadAd(adRequest);
+        mAdView.loadAd(AdMobHandler.getAdRequest());
+        mAdViewInList.loadAd(AdMobHandler.getAdRequest());
     }
 
     public void dismissProgress(){
