@@ -10,6 +10,7 @@
 #import "MMQuestionViewController.h"
 #import "MMUIButton.h"
 #import "MMInfoViewController.h"
+#import "MMConst.h"
 
 @import GoogleMobileAds;
 
@@ -36,13 +37,21 @@
 }
 
 - (void)setBackGroundImage {
-    UIImage *backGroundImage = [UIImage imageNamed:@"TopBackGroundImage"];
+    
+    CGRect display = [UIScreen mainScreen].bounds;
+    UIImage *backGroundImage = nil;
+    
+    if (display.size.height == 480) { // iPhone 4S の場合 (Unit is Point.)
+       backGroundImage = [UIImage imageNamed:@"TopBackGroundImage960"];
+    } else {
+       backGroundImage = [UIImage imageNamed:@"TopBackGroundImage"];
+    }
     self.view.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
 }
 
 - (void)adBannerView {
     
-    self.bannerView.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView.adUnitID = ADMOB_ID;
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
 

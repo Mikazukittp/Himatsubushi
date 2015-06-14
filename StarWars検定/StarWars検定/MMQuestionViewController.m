@@ -14,6 +14,7 @@
 #import "MMIndicatorCustomView.h"
 #import "MONActivityIndicatorView.h"
 #import "MMAnswerActionView.h"
+#import "MMConst.h"
 
 @import GoogleMobileAds;
 
@@ -77,11 +78,11 @@
 //Googleの広告設定
 - (void)adBannerView {
     
-    self.bannerView1.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView1.adUnitID = ADMOB_ID;
     self.bannerView1.rootViewController = self;
     [self.bannerView1 loadRequest:[GADRequest request]];
     
-    self.bannerView2.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView2.adUnitID = ADMOB_ID;
     self.bannerView2.rootViewController = self;
     [self.bannerView2 loadRequest:[GADRequest request]];
     

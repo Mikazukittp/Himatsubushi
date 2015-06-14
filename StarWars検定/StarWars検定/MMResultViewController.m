@@ -8,6 +8,7 @@
 
 #import "MMResultViewController.h"
 #import "MMQuestionViewController.h"
+#import "MMConst.h"
 
 @import GoogleMobileAds;
 
@@ -42,14 +43,14 @@
 }
 
 - (void)setBackGroundImage {
-    UIImage *backGroundImage = [UIImage imageNamed:@"TopBackGroundImage"];
+    UIImage *backGroundImage = [UIImage imageNamed:@"BackGroundImage"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
 }
 
 
 - (void)adBannerView {
     
-    self.bannerView.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView.adUnitID = ADMOB_ID;
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
     

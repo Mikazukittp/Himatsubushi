@@ -17,9 +17,9 @@
 
 @interface MMAPIConst : NSObject
 #if DEBUG
-#define QUESTION_API_URL @"http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/1"
+#define QUESTION_API_URL @"http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/2"
 #else
-#define QUESTION_API_URL @"http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/1"
+#define QUESTION_API_URL @"http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/2"
 #endif
 
 @end

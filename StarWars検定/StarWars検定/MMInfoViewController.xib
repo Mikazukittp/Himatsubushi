@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
@@ -18,7 +17,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLA-Dl-DP9">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">
+                    <string key="text">
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -241,12 +240,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</mutableString>
+SOFTWARE.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="MLA-Dl-DP9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3hW-W8-VvF"/>
                 <constraint firstAttribute="bottom" secondItem="MLA-Dl-DP9" secondAttribute="bottom" id="Ecc-HE-iNh"/>

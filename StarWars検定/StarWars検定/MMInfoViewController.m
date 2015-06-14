@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.title = @"Copyright";
-    
     // Do any additional setup after loading the view from its nib.
 }
 
