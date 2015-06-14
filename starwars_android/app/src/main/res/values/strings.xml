@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NARUTO検定</string>
+    <string name="result_message">お疲れ！</string>
+    <string name="top_link">もう一度チャレンジ！</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+    <string name="result_message_title_1">アカデミー生クラス</string>
+    <string name="result_message_title_2">下忍クラス</string>
+    <string name="result_message_title_3">中忍クラス</string>
+    <string name="result_message_title_4">上忍クラス</string>
+    <string name="result_message_title_5">火影クラス</string>
+    <string name="result_message_1">まだまだヒヨッコだってばよ。そんなんじゃ、卒業試験に合格できないぞ！</string>
+    <string name="result_message_2">まぁ下忍レベルの成績だな。まだ任務を任せるには心もとないってばよ</string>
+    <string name="result_message_3">まぁまぁやるな！中忍レベルだってばよ。でもお前の実力はこんなもんじゃないって信じてるぜ</string>
+    <string name="result_message_4">上忍クラス！里の看板を背負って立つのにふさわしい知力だってばよ</string>
+    <string name="result_message_5">火影クラスの成績！！俺もいつか火影になるんだってばよ！！</string>
+
+    <string name="lisence">ライセンス</string>
+
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_top">ca-app-pub-8668651775161815/8622067086</string>
+    <string name="banner_ad_unit_id_main_middle">ca-app-pub-8668651775161815/5528999881</string>
+    <string name="banner_ad_unit_id_main_bottom">ca-app-pub-8668651775161815/1098800284</string>
+    <string name="banner_ad_unit_id_result">ca-app-pub-8668651775161815/4052266687</string>
+</resources>
