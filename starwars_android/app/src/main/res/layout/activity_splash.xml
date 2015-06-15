@@ -17,62 +17,54 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NARUTO"
+        android:text="STAR WARS"
         android:id="@+id/title"
-        android:layout_alignParentTop="true"
         android:textColor="#fff"
         android:textSize="48dp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="検定"
         android:layout_alignParentTop="false"
         android:textColor="#fff"
-        android:textSize="96dp"
+        android:textSize="80dp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/title" />
+        android:layout_below="@+id/title"
+        android:id="@+id/textView" />
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/imageView2"
+        android:src="@drawable/r2d2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="開始"
+        android:id="@+id/start"
+        android:textSize="60dp"
+        android:background="#8b000000"
+        android:textColor="@color/yellow"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/license">
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textStyle="bold"
+        android:typeface="normal" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/start"
-            android:src="@drawable/makimono"
-            android:scaleType="fitXY"
-            android:background="@null"
-            android:adjustViewBounds="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="開始する"
-            android:id="@+id/buttonText"
-            android:textSize="32dp"
-            android:layout_centerInParent="true"
-            android:textColor="#000" />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/license"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lisence"
-        android:textColor="@color/white"
-        android:layout_above="@+id/adView"
-        android:layout_alignParentRight="true" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

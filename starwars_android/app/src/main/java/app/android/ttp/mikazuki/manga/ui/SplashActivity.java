@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 import com.google.android.gms.ads.AdView;
 
@@ -17,7 +17,7 @@ import butterknife.OnClick;
 
 public class SplashActivity extends Activity {
 
-    @InjectView(R.id.start) ImageButton mStart;
+    @InjectView(R.id.start) Button mStart;
     @InjectView(R.id.adView) AdView mAdView;
 
     @Override
@@ -26,7 +26,7 @@ public class SplashActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         ButterKnife.inject(this);
-        mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
+        //mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
         mAdView.loadAd(AdMobHandler.getAdRequest());
     }
 
@@ -36,10 +36,10 @@ public class SplashActivity extends Activity {
         startActivity(intent);
     }
 
-    @OnClick(R.id.license)
-    public void license() {
-        Intent intent = new Intent(this, LisenceActivity.class);
-        startActivity(intent);
-    }
+//    @OnClick(R.id.license)
+//    public void license() {
+//        Intent intent = new Intent(this, LisenceActivity.class);
+//        startActivity(intent);
+//    }
 
 }
