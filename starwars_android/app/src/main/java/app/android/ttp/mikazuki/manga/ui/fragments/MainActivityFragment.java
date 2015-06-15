@@ -133,12 +133,6 @@ public class MainActivityFragment extends Fragment {
         }
         @Override
         public void onFailure(RetrofitError error) {
-            Log.d("rest", "onFailure!!!");
-            Log.d("!!!!!!!!!!", error.getMessage());
-            questions.add(new Question("ナルトの夢は？", Arrays.asList(new String[]{"火影", "水影", "土影", "雷影"}), 1));
-            questions.add(new Question("ナルトの技は？", Arrays.asList(new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"}),4));
-            questions.add(new Question("ナルトの好物は？", Arrays.asList(new String[]{"そば", "ラーメン", "うどん", "つけ麺"}), 2));
-            updateView();
             dismissProgress();
         }
     }
