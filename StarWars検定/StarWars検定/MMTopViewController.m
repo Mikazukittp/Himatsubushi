@@ -8,7 +8,6 @@
 
 #import "MMTopViewController.h"
 #import "MMQuestionViewController.h"
-#import "MMUIButton.h"
 #import "MMInfoViewController.h"
 #import "MMConst.h"
 
@@ -26,7 +25,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     [self setBackGroundImage];
-    
     [self adBannerView];
     
 }

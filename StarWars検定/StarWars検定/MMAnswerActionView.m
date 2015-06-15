@@ -7,10 +7,11 @@
 //
 
 #import "MMAnswerActionView.h"
+#import "MMUIButton.h"
 
 @interface MMAnswerActionView ()
 
-@property (weak, nonatomic) IBOutlet UIButton *nextQuestionButton;
+@property (weak, nonatomic) IBOutlet MMUIButton *nextQuestionButton;
 @property (weak, nonatomic) IBOutlet UILabel *collectAnswerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *answerImageView;
 @end

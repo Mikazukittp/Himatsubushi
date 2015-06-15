@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="answerImageView" destination="7oZ-LC-JQ7" id="EKg-76-9aB"/>
                 <outlet property="collectAnswerLabel" destination="A9h-Ao-8mg" id="T0y-eM-j5F"/>
-                <outlet property="nextQuestionButton" destination="MQw-Wy-IAQ" id="mGW-35-Agd"/>
+                <outlet property="nextQuestionButton" destination="MQw-Wy-IAQ" id="d68-IM-kD2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -28,6 +28,7 @@
 		834594B21B2DAD720024A9EF /* MMQuestionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 834594B11B2DAD720024A9EF /* MMQuestionFetcher.m */; };
 		834594B51B2DAD7C0024A9EF /* MMUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 834594B41B2DAD7C0024A9EF /* MMUIButton.m */; };
 		834594B71B2DADD10024A9EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834594B61B2DADD10024A9EF /* Images.xcassets */; };
+		8369BA0C1B2F185300132A56 /* MMAlphaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369BA0B1B2F185300132A56 /* MMAlphaButton.m */; };
 		83C5D23E1B2DB2BE00674B6D /* MMConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5D23D1B2DB2BE00674B6D /* MMConst.m */; };
 		BBBFB5D53E4FE1DB305789CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BC307CC6FCD3CCEAA3F208 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,8 @@
 		834594B31B2DAD7C0024A9EF /* MMUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUIButton.h; sourceTree = "<group>"; };
 		834594B41B2DAD7C0024A9EF /* MMUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMUIButton.m; sourceTree = "<group>"; };
 		834594B61B2DADD10024A9EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8369BA0A1B2F185300132A56 /* MMAlphaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAlphaButton.h; sourceTree = "<group>"; };
+		8369BA0B1B2F185300132A56 /* MMAlphaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAlphaButton.m; sourceTree = "<group>"; };
 		83C5D23C1B2DB2BE00674B6D /* MMConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMConst.h; sourceTree = "<group>"; };
 		83C5D23D1B2DB2BE00674B6D /* MMConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMConst.m; sourceTree = "<group>"; };
 		D3BC307CC6FCD3CCEAA3F208 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +217,8 @@
 				8345949D1B2DAD320024A9EF /* MMIndicatorCustomView.h */,
 				8345949E1B2DAD320024A9EF /* MMIndicatorCustomView.m */,
 				8345949F1B2DAD320024A9EF /* MMIndicatorCustomView.xib */,
+				8369BA0A1B2F185300132A56 /* MMAlphaButton.h */,
+				8369BA0B1B2F185300132A56 /* MMAlphaButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				83C5D23E1B2DB2BE00674B6D /* MMConst.m in Sources */,
 				834594AF1B2DAD690024A9EF /* MMQuestionEntity.m in Sources */,
 				834594A01B2DAD320024A9EF /* MMIndicatorCustomView.m in Sources */,
+				8369BA0C1B2F185300132A56 /* MMAlphaButton.m in Sources */,
 				834594B51B2DAD7C0024A9EF /* MMUIButton.m in Sources */,
 				8345949B1B2DAD250024A9EF /* MMInfoViewController.m in Sources */,
 				834594AC1B2DAD530024A9EF /* MMBaseFetcher.m in Sources */,

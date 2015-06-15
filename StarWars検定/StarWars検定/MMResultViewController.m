@@ -60,15 +60,15 @@
     NSInteger rank = [_resultStr integerValue];
     
     if (rank >= 90) {
-        _rankLabel.text = @"火影レベル";
+        _rankLabel.text = @"ヨーダ";
     } else if(rank >= 70) {
-        _rankLabel.text = @"上忍レベル";
+        _rankLabel.text = @"ジェダイマスター";
     } else if(rank >= 50) {
-        _rankLabel.text = @"中忍レベル";
+        _rankLabel.text = @"ジェダイの騎士";
     } else if(rank >= 30) {
-        _rankLabel.text = @"下影レベル";
+        _rankLabel.text = @"反乱軍エースパイロット";
     } else {
-        _rankLabel.text = @"アカデミー生レベル";
+        _rankLabel.text = @"クローントルーパー";
     }
 }
 
