@@ -36,10 +36,10 @@ public class SplashActivity extends Activity {
         startActivity(intent);
     }
 
-//    @OnClick(R.id.license)
-//    public void license() {
-//        Intent intent = new Intent(this, LisenceActivity.class);
-//        startActivity(intent);
-//    }
+    @OnClick(R.id.license)
+    public void license() {
+        Intent intent = new Intent(this, LisenceActivity.class);
+        startActivity(intent);
+    }
 
 }

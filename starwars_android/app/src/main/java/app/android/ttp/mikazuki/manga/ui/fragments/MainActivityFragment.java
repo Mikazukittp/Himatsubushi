@@ -107,7 +107,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void updateView() {
-        title.setText("第" + MangaUtil.getKanjiNumber(now + 1) + "問");
+        title.setText("第" + String.valueOf(now + 1) + "問");
         sentence.setText(questions.get(now).getSentence());
         mAdapter.setChoices(questions.get(now).getSelects());
         mAdapter.notifyDataSetChanged();
