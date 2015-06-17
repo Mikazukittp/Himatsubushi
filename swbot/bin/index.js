@@ -34,5 +34,7 @@ function tweet(){
 // var stream = T.stream('statuses/filter', { track: 'STAR WARS' })
 var stream = T.stream('statuses/filter', { track: 'スターウォーズ' })
 stream.on('tweet', function (tweet) {
-    console.log(tweet)
+    //console.log(tweet);
+    console.log('@%s : %s (%s)', tweet.user.screen_name, tweet.text, tweet.indx);
+    console.log('https://twitter.com/%s/status/%s', tweet.user.screen_name, tweet.id);
 })
