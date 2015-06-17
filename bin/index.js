@@ -11,7 +11,7 @@ access_token: app.get('options').token,
 access_token_secret: app.get('options').token_secret
 });
 
-var cronTime = '0 0 0-14 * * *';
+var cronTime = '0 45 * * * *';
 
 new CronJob({
 cronTime: cronTime,
