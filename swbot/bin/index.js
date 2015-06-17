@@ -31,7 +31,8 @@ function tweet(){
   });
 }
 
-var stream = T.stream('statuses/filter', { track: 'STAR WARS' })
+// var stream = T.stream('statuses/filter', { track: 'STAR WARS' })
+var stream = T.stream('statuses/filter', { track: 'スターウォーズ' })
 stream.on('tweet', function (tweet) {
     console.log(tweet)
 })
