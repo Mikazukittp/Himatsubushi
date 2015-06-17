@@ -5,20 +5,20 @@ var moment = require('moment');
 //var http = require('http');
 
 var T = new Twit({
-consumer_key: app.get('options').key,
-consumer_secret: app.get('options').secret,
-access_token: app.get('options').token,
-access_token_secret: app.get('options').token_secret
+  consumer_key: app.get('options').key,
+  consumer_secret: app.get('options').secret,
+  access_token: app.get('options').token,
+  access_token_secret: app.get('options').token_secret
 });
 
 var cronTime = '0 45 * * * *';
 
 new CronJob({
-cronTime: cronTime,
-onTick: function () {
-tweet();
-},
-start: true
+  cronTime: cronTime,
+  onTick: function () {
+    tweet();
+  },
+  start: true
 });
 
 function tweet(){
@@ -31,3 +31,7 @@ function tweet(){
   });
 }
 
+var stream = T.stream('statuses/filter', { track: 'STAR WARS' })
+stream.on('tweet', function (tweet) {
+    console.log(tweet)
+})
