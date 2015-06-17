@@ -1,8 +1,13 @@
 {
   "name": "swbot",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node bin/index"
+  },
+  "author": "",
   "dependencies": {
     "cron": "^1.0.9",
     "express": "^4.12.4",
@@ -10,13 +15,9 @@
     "twit": "^1.1.20"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "node bin/index",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
     "node": "0.10.x"
   }
 }
+
