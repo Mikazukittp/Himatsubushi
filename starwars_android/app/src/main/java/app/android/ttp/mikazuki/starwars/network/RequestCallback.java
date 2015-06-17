@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.network;
+package app.android.ttp.mikazuki.starwars.network;
 
 import retrofit.Callback;
 import retrofit.RetrofitError;

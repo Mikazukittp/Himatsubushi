@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.ui;
+package app.android.ttp.mikazuki.starwars.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,9 +8,8 @@ import android.widget.Button;
 
 import com.google.android.gms.ads.AdView;
 
-import app.android.ttp.mikazuki.manga.R;
-import app.android.ttp.mikazuki.manga.util.AdMobHandler;
-import app.android.ttp.mikazuki.manga.util.ImageButtonClickedEffectListener;
+import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;

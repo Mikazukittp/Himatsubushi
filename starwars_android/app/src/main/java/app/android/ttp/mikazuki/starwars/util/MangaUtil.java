@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.util;
+package app.android.ttp.mikazuki.starwars.util;
 
 /**
  * Created by haijimakazuki on 15/06/07.
