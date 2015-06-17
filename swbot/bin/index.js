@@ -11,7 +11,7 @@ var T = new Twit({
   access_token_secret: app.get('options').token_secret
 });
 
-var cronTime = '0 45 * * * *';
+var cronTime = '0 0 * * * *';
 
 new CronJob({
   cronTime: cronTime,
@@ -27,7 +27,7 @@ function tweet(){
   console.log(message);
 
   T.post('statuses/update', { status: message }, function(err, data, response) {
-    //console.log('Tweet!');
+    console.log('Tweet!');
   });
 }
 
