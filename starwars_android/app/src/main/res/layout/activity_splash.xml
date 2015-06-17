@@ -17,53 +17,43 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NARUTO"
+        android:text="STAR WARS"
         android:id="@+id/title"
-        android:layout_alignParentTop="true"
         android:textColor="#fff"
         android:textSize="48dp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="検定"
         android:layout_alignParentTop="false"
         android:textColor="#fff"
-        android:textSize="96dp"
+        android:textSize="80dp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/title" />
+        android:layout_below="@+id/title"
+        android:textIsSelectable="false" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="開始"
+        android:id="@+id/start"
+        android:textSize="60dp"
+        android:background="#8b000000"
+        android:textColor="@color/yellow"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:layout_above="@+id/adView"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/license">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/start"
-            android:src="@drawable/makimono"
-            android:scaleType="fitXY"
-            android:background="@null"
-            android:adjustViewBounds="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="開始する"
-            android:id="@+id/buttonText"
-            android:textSize="32dp"
-            android:layout_centerInParent="true"
-            android:textColor="#000" />
-    </RelativeLayout>
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp" />
 
     <TextView
         android:id="@+id/license"

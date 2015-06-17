@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.model;
+package app.android.ttp.mikazuki.starwars.model;
 
 import java.util.ArrayList;
 import java.util.List;

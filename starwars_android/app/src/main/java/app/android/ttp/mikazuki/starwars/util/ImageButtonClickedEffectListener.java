@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.util;
+package app.android.ttp.mikazuki.starwars.util;
 
 import android.graphics.Color;
 import android.view.MotionEvent;

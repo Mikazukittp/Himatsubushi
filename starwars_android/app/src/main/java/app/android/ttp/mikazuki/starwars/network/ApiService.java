@@ -1,6 +1,6 @@
-package app.android.ttp.mikazuki.manga.network;
+package app.android.ttp.mikazuki.starwars.network;
 
-import app.android.ttp.mikazuki.manga.model.BaseResponse;
+import app.android.ttp.mikazuki.starwars.model.BaseResponse;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;

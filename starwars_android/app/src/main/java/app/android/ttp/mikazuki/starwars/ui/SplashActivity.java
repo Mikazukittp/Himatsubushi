@@ -1,23 +1,22 @@
-package app.android.ttp.mikazuki.manga.ui;
+package app.android.ttp.mikazuki.starwars.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 import com.google.android.gms.ads.AdView;
 
-import app.android.ttp.mikazuki.manga.R;
-import app.android.ttp.mikazuki.manga.util.AdMobHandler;
-import app.android.ttp.mikazuki.manga.util.ImageButtonClickedEffectListener;
+import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class SplashActivity extends Activity {
 
-    @InjectView(R.id.start) ImageButton mStart;
+    @InjectView(R.id.start) Button mStart;
     @InjectView(R.id.adView) AdView mAdView;
 
     @Override
@@ -26,7 +25,7 @@ public class SplashActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         ButterKnife.inject(this);
-        mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
+        //mStart.setOnTouchListener(new ImageButtonClickedEffectListener());
         mAdView.loadAd(AdMobHandler.getAdRequest());
     }
 

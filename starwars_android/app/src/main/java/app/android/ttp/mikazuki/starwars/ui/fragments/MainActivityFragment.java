@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.manga.ui.fragments;
+package app.android.ttp.mikazuki.starwars.ui.fragments;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -14,19 +14,17 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import app.android.ttp.mikazuki.manga.R;
-import app.android.ttp.mikazuki.manga.model.BaseResponse;
-import app.android.ttp.mikazuki.manga.model.Question;
-import app.android.ttp.mikazuki.manga.network.ApiFactory;
-import app.android.ttp.mikazuki.manga.network.RequestCallback;
-import app.android.ttp.mikazuki.manga.network.RequestListener;
-import app.android.ttp.mikazuki.manga.ui.ChoiceAdapter;
-import app.android.ttp.mikazuki.manga.ui.modal.Loading;
-import app.android.ttp.mikazuki.manga.util.AdMobHandler;
-import app.android.ttp.mikazuki.manga.util.MangaUtil;
+import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.starwars.model.BaseResponse;
+import app.android.ttp.mikazuki.starwars.model.Question;
+import app.android.ttp.mikazuki.starwars.network.ApiFactory;
+import app.android.ttp.mikazuki.starwars.network.RequestCallback;
+import app.android.ttp.mikazuki.starwars.network.RequestListener;
+import app.android.ttp.mikazuki.starwars.ui.ChoiceAdapter;
+import app.android.ttp.mikazuki.starwars.ui.modal.Loading;
+import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import retrofit.RetrofitError;
@@ -83,7 +81,7 @@ public class MainActivityFragment extends Fragment {
         mDialog = Loading.getDialog(getActivity());
         mDialog.show();
         mListener = (Listener)getActivity();
-        ApiFactory.createApiService().getQuestions(1, new RequestCallback<BaseResponse>(new ResponseListener()));
+        ApiFactory.createApiService().getQuestions(2, new RequestCallback<BaseResponse>(new ResponseListener()));
         return view;
     }
 
@@ -107,7 +105,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void updateView() {
-        title.setText("第" + MangaUtil.getKanjiNumber(now + 1) + "問");
+        title.setText("第" + String.valueOf(now + 1) + "問");
         sentence.setText(questions.get(now).getSentence());
         mAdapter.setChoices(questions.get(now).getSelects());
         mAdapter.notifyDataSetChanged();
@@ -133,12 +131,6 @@ public class MainActivityFragment extends Fragment {
         }
         @Override
         public void onFailure(RetrofitError error) {
-            Log.d("rest", "onFailure!!!");
-            Log.d("!!!!!!!!!!", error.getMessage());
-            questions.add(new Question("ナルトの夢は？", Arrays.asList(new String[]{"火影", "水影", "土影", "雷影"}), 1));
-            questions.add(new Question("ナルトの技は？", Arrays.asList(new String[]{"倍化の術", "影真似の術", "千鳥", "螺旋丸"}),4));
-            questions.add(new Question("ナルトの好物は？", Arrays.asList(new String[]{"そば", "ラーメン", "うどん", "つけ麺"}), 2));
-            updateView();
             dismissProgress();
         }
     }

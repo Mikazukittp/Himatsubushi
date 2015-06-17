@@ -1,19 +1,19 @@
 <resources>
-    <string name="app_name">NARUTO検定</string>
+    <string name="app_name">STAR WARS検定</string>
     <string name="result_message">お疲れ！</string>
     <string name="top_link">もう一度チャレンジ！</string>
     <string name="title_activity_splash">SplashActivity</string>
 
-    <string name="result_message_title_1">アカデミー生クラス</string>
-    <string name="result_message_title_2">下忍クラス</string>
-    <string name="result_message_title_3">中忍クラス</string>
-    <string name="result_message_title_4">上忍クラス</string>
-    <string name="result_message_title_5">火影クラス</string>
-    <string name="result_message_1">まだまだヒヨッコだってばよ。そんなんじゃ、卒業試験に合格できないぞ！</string>
-    <string name="result_message_2">まぁ下忍レベルの成績だな。まだ任務を任せるには心もとないってばよ</string>
-    <string name="result_message_3">まぁまぁやるな！中忍レベルだってばよ。でもお前の実力はこんなもんじゃないって信じてるぜ</string>
-    <string name="result_message_4">上忍クラス！里の看板を背負って立つのにふさわしい知力だってばよ</string>
-    <string name="result_message_5">火影クラスの成績！！俺もいつか火影になるんだってばよ！！</string>
+    <string name="result_message_title_1">クローントルーパークラス</string>
+    <string name="result_message_title_2">反乱軍エースパイロットクラス</string>
+    <string name="result_message_title_3">ジェダイの騎士クラス</string>
+    <string name="result_message_title_4">ジェダイマスタークラス</string>
+    <string name="result_message_title_5">ヨーダクラス</string>
+    <string name="result_message_1">恐れはダークサイドに通じる。恐れは怒りに、怒りは憎しみに、憎しみは苦痛へ。</string>
+    <string name="result_message_2">これは勝利ではない。クローン戦争の始まりじゃ。</string>
+    <string name="result_message_3">偉大な戦士？戦争で偉大にはなれん。</string>
+    <string name="result_message_4">今日からは、こう名乗るがよい。ダース・ベイダーと。</string>
+    <string name="result_message_5">フォースと共にあれ。</string>
 
     <string name="lisence">ライセンス</string>
 
