@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.util;
+package app.android.ttp.mikazuki.onepiece.util;
 
 /**
  * Created by haijimakazuki on 15/06/07.

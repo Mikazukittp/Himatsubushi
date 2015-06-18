@@ -1,10 +1,10 @@
-package app.android.ttp.mikazuki.starwars.ui;
+package app.android.ttp.mikazuki.onepiece.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.onepiece.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 

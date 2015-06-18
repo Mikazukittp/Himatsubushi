@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars;
+package app.android.ttp.mikazuki.onepiece;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

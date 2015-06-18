@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.model;
+package app.android.ttp.mikazuki.onepiece.model;
 
 import java.util.List;
 

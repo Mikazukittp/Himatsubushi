@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.network;
+package app.android.ttp.mikazuki.onepiece.network;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;

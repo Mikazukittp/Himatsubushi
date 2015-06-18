@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.util;
+package app.android.ttp.mikazuki.onepiece.util;
 
 import com.google.android.gms.ads.AdRequest;
 

@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.model;
+package app.android.ttp.mikazuki.onepiece.model;
 
 /**
  * Created by haijimakazuki on 15/06/11.

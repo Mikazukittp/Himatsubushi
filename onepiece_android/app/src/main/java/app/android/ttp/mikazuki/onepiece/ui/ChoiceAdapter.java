@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.ui;
+package app.android.ttp.mikazuki.onepiece.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.onepiece.R;
 
 /**
  * Created by haijimakazuki on 15/06/11.

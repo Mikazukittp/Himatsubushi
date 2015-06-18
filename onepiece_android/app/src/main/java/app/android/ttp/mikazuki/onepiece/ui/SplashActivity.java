@@ -1,16 +1,15 @@
-package app.android.ttp.mikazuki.starwars.ui;
+package app.android.ttp.mikazuki.onepiece.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
-import app.android.ttp.mikazuki.starwars.util.ImageButtonClickedEffectListener;
+import app.android.ttp.mikazuki.onepiece.util.ImageButtonClickedEffectListener;
 import com.google.android.gms.ads.AdView;
 
-import app.android.ttp.mikazuki.starwars.R;
-import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
+import app.android.ttp.mikazuki.onepiece.R;
+import app.android.ttp.mikazuki.onepiece.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;

@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.ui.modal;
+package app.android.ttp.mikazuki.onepiece.ui.modal;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,7 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.Window;
 import android.view.WindowManager;
 
-import app.android.ttp.mikazuki.starwars.R;
+import app.android.ttp.mikazuki.onepiece.R;
 
 
 /**

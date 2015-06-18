@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.ui.fragments;
+package app.android.ttp.mikazuki.onepiece.ui.fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -14,8 +14,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import app.android.ttp.mikazuki.starwars.R;
-import app.android.ttp.mikazuki.starwars.model.Question;
+import app.android.ttp.mikazuki.onepiece.R;
+import app.android.ttp.mikazuki.onepiece.model.Question;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;

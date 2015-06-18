@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.ui.fragments;
+package app.android.ttp.mikazuki.onepiece.ui.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdView;
 
-import app.android.ttp.mikazuki.starwars.R;
-import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
+import app.android.ttp.mikazuki.onepiece.R;
+import app.android.ttp.mikazuki.onepiece.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;

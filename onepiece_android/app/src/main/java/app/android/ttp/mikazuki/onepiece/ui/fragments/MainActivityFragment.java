@@ -1,4 +1,4 @@
-package app.android.ttp.mikazuki.starwars.ui.fragments;
+package app.android.ttp.mikazuki.onepiece.ui.fragments;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -16,15 +16,15 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.android.ttp.mikazuki.starwars.R;
-import app.android.ttp.mikazuki.starwars.model.BaseResponse;
-import app.android.ttp.mikazuki.starwars.model.Question;
-import app.android.ttp.mikazuki.starwars.network.ApiFactory;
-import app.android.ttp.mikazuki.starwars.network.RequestCallback;
-import app.android.ttp.mikazuki.starwars.network.RequestListener;
-import app.android.ttp.mikazuki.starwars.ui.ChoiceAdapter;
-import app.android.ttp.mikazuki.starwars.ui.modal.Loading;
-import app.android.ttp.mikazuki.starwars.util.AdMobHandler;
+import app.android.ttp.mikazuki.onepiece.R;
+import app.android.ttp.mikazuki.onepiece.model.BaseResponse;
+import app.android.ttp.mikazuki.onepiece.model.Question;
+import app.android.ttp.mikazuki.onepiece.network.ApiFactory;
+import app.android.ttp.mikazuki.onepiece.network.RequestCallback;
+import app.android.ttp.mikazuki.onepiece.network.RequestListener;
+import app.android.ttp.mikazuki.onepiece.ui.ChoiceAdapter;
+import app.android.ttp.mikazuki.onepiece.ui.modal.Loading;
+import app.android.ttp.mikazuki.onepiece.util.AdMobHandler;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import retrofit.RetrofitError;
