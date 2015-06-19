@@ -55,7 +55,7 @@ function tweet(message){
 }
 
 // 漫画の問題をランダム取得するメソッド
-var getMangaQuestion = function(mangaId, cb){
+var getMangaQuestion = function(mangaId, cb) {
   request(QUESTIONS_URL+mangaId, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       cb(JSON.parse(body).question_array[0].sentence);
@@ -72,21 +72,86 @@ var getMangaQuestion = function(mangaId, cb){
  *
  ****************************************************/
 
+var josi = [
+  '',
+  'に',
+  'も',
+  'が',
+  'は',
+];
+
+var verbs = [
+  '',
+  'なう',
+  'ナウ',
+  'きた',
+  '来た',
+  'きました',
+  '来ました',
+  'いきたい',
+  '行きたい',
+  'いいらしい',
+  '良いらしい',
+  '面白い',
+  '最高',
+  'よかった',
+  '良かった',
+  '感動した',
+  '並んでる',
+  '混んでる',
+  '人すごい',
+  'めちゃくちゃ混んでる',
+  '楽しみ'
+];
+
+var periods = [
+  '',
+  '、',
+  '。',
+  '。。',
+  '。。。',
+  '!',
+  '!!',
+  '!!!',
+  '！',
+  '！！',
+  '！！！',
+];
+
+
+var makeCandidates = function(array) {
+  var rtn = [];
+  array.forEach(function(str){
+    josi.forEach(function(j){
+      verbs.forEach(function(v){
+        periods.forEach(function(p){
+          rtn.push(str+j+v+p);
+        });
+      });
+    });
+  });
+  return rtn;
+};
+
+console.log(['スターウォーズ展', 'スター・ウォーズ展', 'STAR WARS展', 'STARWARS展', 'star wars展', 'starwars展', 'Star wars展', 'Star Wars展', 'Starwars展'])
+
 // スターウォーズ展とつぶやかれたら
-var swStream = T.stream('statuses/filter', { track: ['スターウォーズ展', 'スター・ウォーズ展', 'STAR WARS展', 'STARWARS展', 'star wars展', 'starwars展', 'Star wars展', 'Starwars展'] });
-swStream.on('tweet', function (tweet) {
+T.stream('statuses/filter', {
+  track: ['スターウォーズ展', 'スター・ウォーズ展', 'STAR WARS展', 'STARWARS展', 'star wars展', 'starwars展', 'Star wars展', 'Star Wars展', 'Starwars展']
+}).on('tweet', function (tweet) {
   T.post('statuses/update', { status: '@'+tweet.user.screen_name+STARWARS_MESSAGE }, function(err, data, response) {
-    console.log('Post: %s', message);
+    console.log('Post to %s', '@'+tweet.user.screen_name);
   });
   console.log('@%s : %s (%s)', tweet.user.screen_name, tweet.text, tweet.id_str);
   console.log('https://twitter.com/%s/status/%s', tweet.user.screen_name, tweet.id_str);
 });
 
 // ナルト展とつぶやかれたら
-var narutoStream = T.stream('statuses/filter', { track: ['ナルト展', 'NARUTO展'] });
-narutoStream.on('tweet', function (tweet) {
+T.stream('statuses/filter', {
+  track: ['ナルト展', 'NARUTO展']
+}).on('tweet', function (tweet) {
   T.post('statuses/update', { status: '@'+tweet.user.screen_name+NARUTO_MESSAGE }, function(err, data, response) {
-    console.log('Post: %s', message);
+    console.log('Post to %s', '@'+tweet.user.screen_name);
   });
   console.log('@%s : %s (%s)', tweet.user.screen_name, tweet.text, tweet.id_str);
   console.log('https://twitter.com/%s/status/%s', tweet.user.screen_name, tweet.id_str);
