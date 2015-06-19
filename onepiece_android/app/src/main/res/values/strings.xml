@@ -18,8 +18,8 @@
     <string name="lisence">ライセンス</string>
 
     <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_top">ca-app-pub-8668651775161815/8622067086</string>
-    <string name="banner_ad_unit_id_main_middle">ca-app-pub-8668651775161815/5528999881</string>
-    <string name="banner_ad_unit_id_main_bottom">ca-app-pub-8668651775161815/1098800284</string>
-    <string name="banner_ad_unit_id_result">ca-app-pub-8668651775161815/4052266687</string>
+    <string name="banner_ad_unit_id_top">ca-app-pub-8668651775161815/9613802285</string>
+    <string name="banner_ad_unit_id_main_middle">ca-app-pub-8668651775161815/5044001887</string>
+    <string name="banner_ad_unit_id_main_bottom">ca-app-pub-8668651775161815/3567268688</string>
+    <string name="banner_ad_unit_id_result">ca-app-pub-8668651775161815/6520735082</string>
 </resources>
