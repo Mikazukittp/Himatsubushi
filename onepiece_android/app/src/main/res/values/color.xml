@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#ff2d6dbb</color>
+    <color name="yellow">#ffffe359</color>
+    <color name="primary_dark">#ff172bbb</color>
+    <color name="transparent_black_dark">#a0000000</color>
+    <color name="transparent_black_light">#50000000</color>
+    <color name="transparent_white_dark">#a0ffffff</color>
+    <color name="transparent_white_light">#3cffffff</color>
+    <color name="white">#fff</color>
+    <color name="light_gray">#dcdcdc</color>
+    <color name="gray">#ccc</color>
+    <color name="dark_gray">#666</color>
+</resources>
+

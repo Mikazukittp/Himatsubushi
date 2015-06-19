@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ONE PIECE検定</string>
+    <string name="result_message">お疲れ！</string>
+    <string name="top_link">もう一度チャレンジ！</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+    <string name="result_message_title_1">賞金額５０ベリー</string>
+    <string name="result_message_title_2">賞金額１６００万ベリー</string>
+    <string name="result_message_title_3">賞金額１億ベリー</string>
+    <string name="result_message_title_4">賞金額３億ベリー</string>
+    <string name="result_message_title_5">賞金額５億５０００万ベリー</string>
+    <string name="result_message_1">このおれをバカと呼んでいいのはそれを決めたおれだけだ</string>
+    <string name="result_message_2">アクビがでるぜ・・・</string>
+    <string name="result_message_3">次ァどんな ロマンを追いかけようか</string>
+    <string name="result_message_4">海賊王に、俺はなるッ!!!</string>
+    <string name="result_message_5">人の夢は!!! 終わらねェ!!!!</string>
+
+    <string name="lisence">ライセンス</string>
+
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_top">ca-app-pub-8668651775161815/8622067086</string>
+    <string name="banner_ad_unit_id_main_middle">ca-app-pub-8668651775161815/5528999881</string>
+    <string name="banner_ad_unit_id_main_bottom">ca-app-pub-8668651775161815/1098800284</string>
+    <string name="banner_ad_unit_id_result">ca-app-pub-8668651775161815/4052266687</string>
+</resources>
