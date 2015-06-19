@@ -83,8 +83,8 @@ swStream.on('tweet', function (tweet) {
 });
 
 // ナルト展とつぶやかれたら
-var swStream = T.stream('statuses/filter', { track: ['ナルト展', 'NARUTO展'] });
-swStream.on('tweet', function (tweet) {
+var narutoStream = T.stream('statuses/filter', { track: ['ナルト展', 'NARUTO展'] });
+narutoStream.on('tweet', function (tweet) {
   T.post('statuses/update', { status: '@'+tweet.user.screen_name+NARUTO_MESSAGE }, function(err, data, response) {
     console.log('Post: %s', message);
   });
