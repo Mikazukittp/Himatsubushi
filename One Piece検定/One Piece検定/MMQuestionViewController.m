@@ -78,11 +78,11 @@
 //Googleの広告設定
 - (void)adBannerView {
     
-    self.bannerView1.adUnitID = ADMOB_ID;
+    self.bannerView1.adUnitID = ADMOB_QUESTION_HEAD_ID;
     self.bannerView1.rootViewController = self;
     [self.bannerView1 loadRequest:[GADRequest request]];
     
-    self.bannerView2.adUnitID = ADMOB_ID;
+    self.bannerView2.adUnitID = ADMOB_QUESTION_BOTTOM_ID;
     self.bannerView2.rootViewController = self;
     [self.bannerView2 loadRequest:[GADRequest request]];
     
@@ -94,7 +94,7 @@
         // iOS バージョンが 8 以上で、UIAlertController クラスが利用できる場合
         UIAlertController *alertController =
         [UIAlertController alertControllerWithTitle:@"通信エラー"
-                                            message:@"通信状況の良い所で試してくれってばよ"
+                                            message:@"通信状況の良い所で試してくれ！"
                                      preferredStyle:UIAlertControllerStyleAlert];
         // Close ボタンを表示する
         UIAlertAction *alertAction =
@@ -108,7 +108,7 @@
         // iOS バージョンが 8 未満で、UIAlertController クラスが利用できない場合
         UIAlertView *alertView =
         [[UIAlertView alloc] initWithTitle:@"通信エラー"
-                                   message:@"通信状況の良い所で試してくれってばよ"
+                                   message:@"通信状況の良い所で試してくれ！"
                                   delegate:nil
                          cancelButtonTitle:@"了解"
                          otherButtonTitles:nil];
@@ -200,7 +200,6 @@
 - (void)pushToResultController {
     MMResultViewController *vc = [MMResultViewController new];
     
-    answerPoint++;
     float answerPer = answerPoint / _questions.count * 100;
     NSString *cnv = [NSString stringWithFormat:@"%.f", answerPer];
     vc.resultStr = [NSString stringWithFormat:@"%@%@",cnv,@"%"];

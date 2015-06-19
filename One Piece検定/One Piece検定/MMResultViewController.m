@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rankLabel;
+@property (weak, nonatomic) IBOutlet UIView *resultView;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end
 
@@ -23,10 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    
+        
     self.title = @"結果";
     
     [self setRankLabelWithResultString];
@@ -43,14 +42,21 @@
 }
 
 - (void)setBackGroundImage {
-    UIImage *backGroundImage = [UIImage imageNamed:@"BackGroundImage"];
+    UIImage *backGroundImage = [UIImage imageNamed:@"ResultImage"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:backGroundImage];
-}
+    
+    UIColor *color = [UIColor whiteColor];
+    _resultView.backgroundColor =  [color colorWithAlphaComponent:0.2];
+    _resultView.layer.cornerRadius = 5;
+    _resultView.clipsToBounds = true;
+    
+    _resultLabel.backgroundColor =[color colorWithAlphaComponent:0.9];
 
+}
 
 - (void)adBannerView {
     
-    self.bannerView.adUnitID = ADMOB_ID;
+    self.bannerView.adUnitID = ADMOB_RESULT_ID;
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
     
@@ -60,15 +66,20 @@
     NSInteger rank = [_resultStr integerValue];
     
     if (rank >= 90) {
-        _rankLabel.text = @"ヨーダ";
+        _rankLabel.text = @"海賊王クラス";
+        _detailLabel.text = @"今日から海賊王と名乗るが良い";
     } else if(rank >= 70) {
-        _rankLabel.text = @"ジェダイマスター";
+        _rankLabel.text = @"四皇クラス";
+        _detailLabel.text = @"君はシャンクスと肩を並べている";
     } else if(rank >= 50) {
-        _rankLabel.text = @"ジェダイの騎士";
+        _rankLabel.text = @"3000万ベリークラス";
+        _detailLabel.text = @"まだまだ新世界は遠い";
     } else if(rank >= 30) {
-        _rankLabel.text = @"反乱軍エースパイロット";
+        _rankLabel.text = @"イーストブルークラス";
+        _detailLabel.text = @"まだまだグランドラインは遠い";
     } else {
-        _rankLabel.text = @"クローントルーパー";
+        _rankLabel.text = @"海軍雑用クラス";
+        _detailLabel.text = @"まだまだだね";
     }
 }
 

@@ -103,7 +103,7 @@
                                                         toItem:self
                                                      attribute:NSLayoutAttributeTop
                                                     multiplier:1.0f
-                                                      constant:40.0f]];
+                                                      constant:30.0f]];
    
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_collectAnswerLabel
                                                      attribute:NSLayoutAttributeCenterX

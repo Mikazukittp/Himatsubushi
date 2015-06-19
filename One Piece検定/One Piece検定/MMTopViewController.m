@@ -49,7 +49,7 @@
 
 - (void)adBannerView {
     
-    self.bannerView.adUnitID = ADMOB_ID;
+    self.bannerView.adUnitID = ADMOB_TOP_ID;
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
 

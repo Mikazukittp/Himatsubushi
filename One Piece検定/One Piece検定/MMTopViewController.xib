@@ -36,7 +36,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywF-0N-nU4" customClass="MMUIButton">
-                    <rect key="frame" x="210" y="460" width="180" height="50"/>
+                    <rect key="frame" x="210" y="465" width="180" height="50"/>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.87843137250000003" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="270" id="AkA-hz-qZ8"/>
@@ -64,7 +64,7 @@
                 <constraint firstItem="ywF-0N-nU4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="FoG-Zq-2mo"/>
                 <constraint firstAttribute="trailing" secondItem="cs7-vI-uYd" secondAttribute="trailing" constant="10" id="L1B-E5-gG8"/>
                 <constraint firstAttribute="trailing" secondItem="bfK-fD-6bW" secondAttribute="trailing" id="ONL-xA-RGk"/>
-                <constraint firstItem="bfK-fD-6bW" firstAttribute="top" secondItem="ywF-0N-nU4" secondAttribute="bottom" constant="40" id="TZk-5y-Ton"/>
+                <constraint firstItem="bfK-fD-6bW" firstAttribute="top" secondItem="ywF-0N-nU4" secondAttribute="bottom" constant="35" id="TZk-5y-Ton"/>
                 <constraint firstItem="bfK-fD-6bW" firstAttribute="top" secondItem="cs7-vI-uYd" secondAttribute="bottom" id="Vdg-rg-iBp"/>
                 <constraint firstAttribute="centerX" secondItem="ywF-0N-nU4" secondAttribute="centerX" id="nTn-nu-IPq"/>
             </constraints>

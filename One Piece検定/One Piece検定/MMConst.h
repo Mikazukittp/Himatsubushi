@@ -11,10 +11,28 @@
 @interface MMConst : NSObject
 
 #if DEBUG
-#define ADMOB_ID @"/6499/example/banner"
+#define ADMOB_TOP_ID @"/6499/example/banner"
 #else
-#define ADMOB_ID @"ca-app-pub-8668651775161815/2565200282"
+#define ADMOB_TOP_ID @"ca-app-pub-8668651775161815/8204447888"
 #endif
 
+
+#if DEBUG
+#define ADMOB_QUESTION_BOTTOM_ID @"/6499/example/banner"
+#else
+#define ADMOB_QUESTION_BOTTOM_ID @"ca-app-pub-8668651775161815/2157914285"
+#endif
+
+#if DEBUG
+#define ADMOB_QUESTION_HEAD_ID @"/6499/example/banner"
+#else
+#define ADMOB_QUESTION_HEAD_ID @"ca-app-pub-8668651775161815/9681181088"
+#endif
+
+#if DEBUG
+#define ADMOB_RESULT_ID @"/6499/example/banner"
+#else
+#define ADMOB_RESULT_ID @"ca-app-pub-8668651775161815/3634647482"
+#endif
 
 @end
