@@ -41,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"問題";
+    self.title = @"問題1";
     
     //navigationBarの高さ分viewを下げる
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
@@ -77,11 +77,11 @@
 //Googleの広告設定
 - (void)adBannerView {
     
-    self.bannerView1.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView1.adUnitID = @"ca-app-pub-8668651775161815/5970188281";
     self.bannerView1.rootViewController = self;
     [self.bannerView1 loadRequest:[GADRequest request]];
     
-    self.bannerView2.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView2.adUnitID = @"ca-app-pub-8668651775161815/2877121085";
     self.bannerView2.rootViewController = self;
     [self.bannerView2 loadRequest:[GADRequest request]];
     
@@ -119,11 +119,6 @@
 //APIからデータをとってviewの表示
 - (void)fetchData {
     
-    NSBundle* bundle = [NSBundle mainBundle];
-    //読み込むファイルパスを指定
-    NSString* path = [bundle pathForResource:@"OnePiece" ofType:@"plist"];
-    _questions = [[NSMutableArray arrayWithContentsOfFile:path] objectAtIndex:0];
-    
     __weak MMQuestionViewController *weakSelf = self;
 
     MMQuestionFetcher *fetcher = [[MMQuestionFetcher alloc]init];
@@ -133,7 +128,6 @@
         weakSelf.indicatorView.hidden = YES;
         [weakSelf.indicatorView stopAnimation];
     }failedBlock:^(NSError *error){
-        NSLog(@"%@",error);
         [weakSelf.indicatorView stopAnimation];
         [weakSelf netWorkError];
     }];
@@ -170,34 +164,41 @@
     NSInteger answerNumber = question.correct_answer;
     
     currentQuestionNumber ++;
-
+    BOOL isFinish = NO;
     if (currentQuestionNumber >= _questions.count) {
-        MMResultViewController *vc = [MMResultViewController new];
-        
-        answerPoint++;
-        float answerPer = answerPoint / _questions.count * 100;
-        NSString *cnv = [NSString stringWithFormat:@"%.f", answerPer];
-        vc.resultStr = [NSString stringWithFormat:@"%@%@",cnv,@"%"];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-    }else {
-        
-        if (choiceNumber == answerNumber) {
-            answerPoint ++;
-            [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeCollect collectString:question.collectString];
-        } else {
-            [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeFailed collectString:question.collectString];
-        }
-        
-         [self setAnswerButtonSentence];
+        isFinish = YES;
     }
     
+    if (choiceNumber == answerNumber) {
+        answerPoint ++;
+        [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeCollect collectString:question.collectString isFinish:isFinish];
+    } else {
+        [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeFailed collectString:question.collectString isFinish:isFinish];
+    }
     _answerQuestionView.hidden = NO;
 }
 
 - (void)nextQuestion {
     _answerQuestionView.hidden = YES;
-    [self setAnswerButtonSentence];
+    
+    if (currentQuestionNumber >= _questions.count) {
+        [self pushToResultController];
+    }else {
+        self.title = [NSString stringWithFormat:@"問題%d",currentQuestionNumber+1];
+        [self setAnswerButtonSentence];
+    }
     
 }
+
+- (void)pushToResultController {
+    MMResultViewController *vc = [MMResultViewController new];
+    
+    float answerPer = answerPoint / _questions.count * 100;
+    NSString *cnv = [NSString stringWithFormat:@"%.f", answerPer];
+    vc.resultStr = [NSString stringWithFormat:@"%@%@",cnv,@"%"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
 @end
