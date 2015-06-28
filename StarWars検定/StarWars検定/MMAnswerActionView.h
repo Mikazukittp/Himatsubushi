@@ -30,5 +30,5 @@ typedef NS_ENUM(NSInteger, MMQuestionAnswerType) {
 @property (nonatomic, assign) id<MMNextQuestionDelegate> delegate;
 
 /*! @brief 正解/不正解のアニメーションを実装 */
-- (void)showAnswerWith:(MMQuestionAnswerType)type collectString:(NSString *)collectString;
+- (void)showAnswerWith:(MMQuestionAnswerType)type collectString:(NSString *)collectString isFinish:(BOOL)isFinish;
 @end
