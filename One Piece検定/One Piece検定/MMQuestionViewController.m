@@ -134,7 +134,6 @@
         weakSelf.indicatorView.hidden = YES;
         [weakSelf.indicatorView stopAnimation];
     }failedBlock:^(NSError *error){
-        NSLog(@"%@",error);
         [weakSelf.indicatorView stopAnimation];
         [weakSelf netWorkError];
     }];
