@@ -42,7 +42,7 @@
 
 - (void)adBannerView {
     
-    self.bannerView.adUnitID = @"ca-app-pub-3924495495459603/1647410174";
+    self.bannerView.adUnitID = @"ca-app-pub-8668651775161815/9063255485";
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
 

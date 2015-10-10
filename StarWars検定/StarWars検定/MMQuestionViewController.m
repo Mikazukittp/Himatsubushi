@@ -171,34 +171,40 @@
     NSInteger answerNumber = question.correct_answer;
     
     currentQuestionNumber ++;
-
+    BOOL isFinish = NO;
     if (currentQuestionNumber >= _questions.count) {
-        MMResultViewController *vc = [MMResultViewController new];
-        
-        answerPoint++;
-        float answerPer = answerPoint / _questions.count * 100;
-        NSString *cnv = [NSString stringWithFormat:@"%.f", answerPer];
-        vc.resultStr = [NSString stringWithFormat:@"%@%@",cnv,@"%"];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-    }else {
-        
-        if (choiceNumber == answerNumber) {
-            answerPoint ++;
-            [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeCollect collectString:question.collectString];
-        } else {
-            [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeFailed collectString:question.collectString];
-        }
-        
-         [self setAnswerButtonSentence];
+        isFinish = YES;
     }
     
+    if (choiceNumber == answerNumber) {
+        answerPoint ++;
+        [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeCollect collectString:question.collectString isFinish:isFinish];
+    } else {
+        [_answerQuestionView showAnswerWith:MMQuestionAnswerTypeFailed collectString:question.collectString isFinish:isFinish];
+    }
     _answerQuestionView.hidden = NO;
 }
 
 - (void)nextQuestion {
     _answerQuestionView.hidden = YES;
-    [self setAnswerButtonSentence];
+    
+    if (currentQuestionNumber >= _questions.count) {
+        [self pushToResultController];
+    }else {
+        self.title = [NSString stringWithFormat:@"問題%d",currentQuestionNumber+1];
+        [self setAnswerButtonSentence];
+    }
+    
+}
+
+- (void)pushToResultController {
+    MMResultViewController *vc = [MMResultViewController new];
+    
+    float answerPer = answerPoint / _questions.count * 100;
+    NSString *cnv = [NSString stringWithFormat:@"%.f", answerPer];
+    vc.resultStr = [NSString stringWithFormat:@"%@%@",cnv,@"%"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 @end

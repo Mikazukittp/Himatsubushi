@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <corners android:radius="5dp" />
+            <solid android:color="@color/light_gray" />
+            <padding
+                android:left="@dimen/activity_horizontal_margin"
+                android:right="@dimen/activity_horizontal_margin"
+                android:top="@dimen/activity_vertical_small_margin"
+                android:bottom="@dimen/activity_vertical_small_margin"/>
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <corners android:radius="5dp" />
+            <solid android:color="@color/white" />
+            <padding
+                android:left="@dimen/activity_horizontal_margin"
+                android:right="@dimen/activity_horizontal_margin"
+                android:top="@dimen/activity_vertical_small_margin"
+                android:bottom="@dimen/activity_vertical_small_margin"/>
+        </shape>
+    </item>
+</selector>

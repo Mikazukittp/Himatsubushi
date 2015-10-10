@@ -9,6 +9,7 @@
 #import "MMInfoViewController.h"
 
 @interface MMInfoViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     
     self.title = @"Copyright";
-    // Do any additional setup after loading the view from its nib.
+    self.textView.editable = NO;
 }
 
 @end

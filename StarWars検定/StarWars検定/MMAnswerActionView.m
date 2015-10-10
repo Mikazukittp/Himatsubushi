@@ -7,10 +7,11 @@
 //
 
 #import "MMAnswerActionView.h"
+#import "MMUIButton.h"
 
 @interface MMAnswerActionView ()
 
-@property (weak, nonatomic) IBOutlet UIButton *nextQuestionButton;
+@property (weak, nonatomic) IBOutlet MMUIButton *nextQuestionButton;
 @property (weak, nonatomic) IBOutlet UILabel *collectAnswerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *answerImageView;
 @end
@@ -34,7 +35,7 @@
         
         // レイヤーサイズをビューのサイズをそろえる
         gradient.frame = frame;
-
+        
         
         gradient.colors = @[
                             // 開始色
@@ -47,26 +48,24 @@
         [customView.layer insertSublayer:gradient atIndex:0];
         
         [self setPositions];
-        [self showAnswerWith:MMQuestionAnswerTypeCollect collectString:@"aaa"];
+        [self showAnswerWith:MMQuestionAnswerTypeCollect collectString:@"" isFinish:NO];
         
     }
     return self;
 }
 
-- (void)showAnswerWith:(MMQuestionAnswerType)type collectString:(NSString *)collectString{
+- (void)showAnswerWith:(MMQuestionAnswerType)type collectString:(NSString *)collectString isFinish:(BOOL)isFinish{
     _answerImageView.alpha = 0;
-//    _nextQuestionButton.hidden = YES;
-  
-     
+    if (isFinish) [_nextQuestionButton setTitle:@"結果へ" forState:UIControlStateNormal];
+    
     if (type == MMQuestionAnswerTypeCollect) {
         _answerImageView.image = [UIImage imageNamed:@"Circle"];
         _collectAnswerLabel.hidden = YES;
-
+        
     } else {
         _answerImageView.image = [UIImage imageNamed:@"Batsu"];
         _collectAnswerLabel.hidden = NO;
         _collectAnswerLabel.text = collectString;
-
     }
     
     [self showAnimation];
@@ -76,13 +75,15 @@
     
     _answerImageView.alpha = 0.0;
     _collectAnswerLabel.alpha = 0.0;
+    _nextQuestionButton.alpha = 0.0;
     
-    [UIView animateWithDuration:1.0 // 4秒かけてアニメーション
+    [UIView animateWithDuration:0.5 // 1秒かけてアニメーション
                      animations:^
-    {
-        _answerImageView.alpha = 1.0; // 透明にする
-        _collectAnswerLabel.alpha = 1.0;
-    }];
+     {
+         _answerImageView.alpha = 1.0; // 透明にする
+         _collectAnswerLabel.alpha = 1.0;
+         _nextQuestionButton.alpha = 1.0;
+     }];
 }
 
 //オートレイアウトで○と☓のポジジョンを設定する
@@ -102,8 +103,8 @@
                                                         toItem:self
                                                      attribute:NSLayoutAttributeTop
                                                     multiplier:1.0f
-                                                      constant:40.0f]];
-   
+                                                      constant:30.0f]];
+    
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_collectAnswerLabel
                                                      attribute:NSLayoutAttributeCenterX
                                                      relatedBy:NSLayoutRelationEqual

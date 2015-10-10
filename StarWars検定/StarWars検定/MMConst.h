@@ -13,7 +13,7 @@
 #if DEBUG
 #define ADMOB_ID @"/6499/example/banner"
 #else
-#define ADMOB_ID @"ca-app-pub-3924495495459603/1647410174"
+#define ADMOB_ID @"ca-app-pub-8668651775161815/2565200282"
 #endif
 
 

@@ -35,7 +35,6 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/title"
-        android:id="@+id/textView"
         android:textIsSelectable="false" />
 
     <Button
@@ -46,15 +45,15 @@
         android:textSize="60dp"
         android:background="#8b000000"
         android:textColor="@color/yellow"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:textStyle="bold"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp" />
 
     <TextView
         android:id="@+id/license"

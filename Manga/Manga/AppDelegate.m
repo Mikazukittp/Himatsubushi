@@ -23,7 +23,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     MMTopViewController *viewController = [[MMTopViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:viewController];
-    viewController.title = @"NARUTO検定";
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title = @"戻る";

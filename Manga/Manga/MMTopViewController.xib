@@ -51,18 +51,6 @@
                     <rect key="frame" x="0.0" y="451" width="600" height="49"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" preferredMaxLayoutWidth="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
-                    <rect key="frame" x="166" y="150" width="250" height="150"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="0kw-YI-vf4"/>
-                        <constraint firstAttribute="height" constant="150" id="hC7-Kb-6dt"/>
-                    </constraints>
-                    <string key="text">NARUTO
-検定</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="49"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs7-vI-uYd">
                     <rect key="frame" x="560" y="510" width="30" height="30"/>
                     <constraints>
@@ -76,6 +64,18 @@
                         <action selector="infoButtonTapped:" destination="-1" eventType="touchUpInside" id="iLS-af-WZJ"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-oJ-lEV">
+                    <rect key="frame" x="166" y="150" width="250" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="0kw-YI-vf4"/>
+                        <constraint firstAttribute="height" constant="150" id="hC7-Kb-6dt"/>
+                    </constraints>
+                    <string key="text">激ムズ検定
+for NARUTO</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
                 <constraint firstItem="KsB-PL-CKN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5RL-Ik-RYF"/>
