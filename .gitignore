@@ -1,4 +1,4 @@
-# Ignore bundler config.
+dler config.
 /.bundle
 
 # Ignore bundler gems.
@@ -20,3 +20,8 @@ doc/
 .DS_Store
 .idea
 .secret
+
+node_modules
+.idea
+npm-debug.log
+local_run.sh
