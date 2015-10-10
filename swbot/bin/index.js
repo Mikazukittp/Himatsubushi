@@ -5,8 +5,9 @@ var moment = require('moment');
 //var http = require('http');
 var request = require('request');
 var QUESTIONS_URL = 'http://ec2-52-68-159-188.ap-northeast-1.compute.amazonaws.com/api/v1/questions/';
-var NARUTO_MESSAGE = ' NARUTO展最高だってばよ！ NARUTOの問題を集めたアプリが公開されているよ！もしandroidを持っていたら是非試してみてね！ https://goo.gl/An4pUW'
-var STARWARS_MESSAGE = ' STAR WARS展いいですね！ STAR WARSの問題を集めたアプリが公開されています！もしandroidを持っていたら是非試してみてね！ https://goo.gl/B0hZuz'
+var NARUTO_MESSAGE = ' NARUTO展最高だってばよ！ NARUTOの問題を集めたアプリが公開されているよ！是非試してみてね！ https://goo.gl/IMMgq2'
+var STARWARS_MESSAGE = ' STAR WARS展いいですね！ STAR WARSの問題を集めたアプリが公開されています！是非試してみてね！ https://goo.gl/Zod5Mb'
+var ONEPIECE_MESSAGE = ' ONE PIECEお好きなんですね！ ONE PIECEの問題を集めたアプリを作ったよ！是非挑戦してみてね！ https://goo.gl/gj6JgZ'
 
 
 
@@ -151,6 +152,17 @@ T.stream('statuses/filter', {
   track: ['ナルト展', 'NARUTO展']
 }).on('tweet', function (tweet) {
   T.post('statuses/update', { status: '@'+tweet.user.screen_name+NARUTO_MESSAGE }, function(err, data, response) {
+    console.log('Post to %s', '@'+tweet.user.screen_name);
+  });
+  console.log('@%s : %s (%s)', tweet.user.screen_name, tweet.text, tweet.id_str);
+  console.log('https://twitter.com/%s/status/%s', tweet.user.screen_name, tweet.id_str);
+});
+
+// ONE PIECEとつぶやかれたら
+T.stream('statuses/filter', {
+  track: ['ウルージ', '今週のワンピ', 'ドンッ', 'クソお世話になりました', '人の夢は終わらね', 'まったくいい人生だった', '好き勝手やりなさる']
+}).on('tweet', function (tweet) {
+  T.post('statuses/update', { status: '@'+tweet.user.screen_name+ONEPIECE_MESSAGE }, function(err, data, response) {
     console.log('Post to %s', '@'+tweet.user.screen_name);
   });
   console.log('@%s : %s (%s)', tweet.user.screen_name, tweet.text, tweet.id_str);
