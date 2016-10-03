@@ -13,7 +13,6 @@
 
 -(void)sendAsynchronousByUrl:(NSURLRequest *)request block:(setEntityArray)block
 {
-    //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     __block NSDictionary* questions;
     
     [NSURLConnection sendAsynchronousRequest:request

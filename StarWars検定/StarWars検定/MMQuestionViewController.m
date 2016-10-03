@@ -93,8 +93,8 @@
     if ([UIAlertController class]) {
         // iOS バージョンが 8 以上で、UIAlertController クラスが利用できる場合
         UIAlertController *alertController =
-        [UIAlertController alertControllerWithTitle:@"通信エラー"
-                                            message:@"通信状況の良い所で試してくれってばよ"
+        [UIAlertController alertControllerWithTitle:@"通信状況が悪いようです。"
+                                            message:@"May the network be with you"
                                      preferredStyle:UIAlertControllerStyleAlert];
         // Close ボタンを表示する
         UIAlertAction *alertAction =
@@ -107,8 +107,8 @@
     } else {
         // iOS バージョンが 8 未満で、UIAlertController クラスが利用できない場合
         UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"通信エラー"
-                                   message:@"通信状況の良い所で試してくれってばよ"
+        [[UIAlertView alloc] initWithTitle:@"通信状況が悪いようです。"
+                                   message:@"May the network be with you"
                                   delegate:nil
                          cancelButtonTitle:@"了解"
                          otherButtonTitles:nil];
